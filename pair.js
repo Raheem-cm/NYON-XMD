@@ -35,22 +35,22 @@ const config = {
     AUTO_LIKE_EMOJI: ['💋', '😶', '✨️', '💗', '🎈', '🎉', '🥳', '❤️', '🧫', '🐭'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    IMAGE_PATH: 'https://files.catbox.moe/lpll66.jpg',
+    IMAGE_PATH: 'https://files.catbox.moe/sxciqo.jpg',
     GROUP_INVITE_LINK: '',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: 'https://files.catbox.moe/lpll66.jpg',
-    NEWSLETTER_JID: '120363289379419860@newsletter',
+    RCD_IMAGE_PATH: 'https://files.catbox.moe/sxciqo.jpg',
+    NEWSLETTER_JID: '120363399470975987@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
     version: '1.0.0',
-    OWNER_NUMBER: '254732297194',
-    BOT_FOOTER: '> ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBTlzoLtOjGXhhD4I2d'
+    OWNER_NUMBER: '255610209120',
+    BOT_FOOTER: '> ᴍᴀᴅᴇ ɪɴ ʙʏ NYON-XMD'',
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r'
 };
 
 const octokit = new Octokit({ auth: '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' });
-const owner = 'kenyanpopkid';
-const repo = 'POPKID-XTR';
+const owner = 'nyoni-xmd';
+const repo = 'NYON-XMD';
 
 const activeSockets = new Map();
 const socketCreationTime = new Map();
@@ -84,7 +84,7 @@ function generateOTP() {
 }
 
 function getSriLankaTimestamp() {
-    return moment().tz('Africa/Nairobi').format('YYYY-MM-DD HH:mm:ss');
+    return moment().tz('Africa/dar es salaam').format('YYYY-MM-DD HH:mm:ss');
 }
 
 
@@ -230,7 +230,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+        'ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
     );
 
     try {
@@ -341,7 +341,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+            'ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
         );
 
         try {
@@ -514,7 +514,7 @@ function setupCommandHandlers(socket, number) {
             },
             message: {
                 contactMessage: {
-                    displayName: "© ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ✅",
+                    displayName: "© ᴍɪɴɪ NYON XMD ✅",
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Meta\nORG:META AI;\nTEL;type=CELL;type=VOICE;waid=254101022551:+254101022551\nEND:VCARD`
                 }
             }
@@ -540,11 +540,11 @@ function setupCommandHandlers(socket, number) {
 │ ᴠᴇʀsɪᴏɴ: ${config.version}
 │ ᴍᴇᴍᴏʀʏ ᴜsᴀɢᴇ: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}ᴍʙ
 ╰───────────────⭓
-  > *▫️ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ᴍᴀɪɴ*
+  > *▫️ᴍɪɴɪ Nyoni Xmd ᴍᴀɪɴ*
   > ʀᴇsᴘᴏɴᴅ ᴛɪᴍᴇ: ${Date.now() - msg.messageTimestamp * 1000}ms
 `;
         const aliveMessage = {
-            image: { url: "https://files.catbox.moe/lpll66.jpg" },
+            image: { url: "https://files.catbox.moe/sxciqo.jpg" },
             caption: `> ᴀᴍ ᴀʟɪᴠᴇ ɴn ᴋɪᴄᴋɪɴɢ 👾\n\n${captionText}`,
             buttons: [
                 {
@@ -557,7 +557,7 @@ function setupCommandHandlers(socket, number) {
                             title: 'ᴄʟɪᴄᴋ ʜᴇʀᴇ ❏',
                             sections: [
                                 {
-                                    title: `© ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ`,
+                                    title: `© ᴍɪɴɪ Nyon Xmd`,
                                     highlight_label: 'Quick Actions',
                                     rows: [
                                         { title: '📋 ғᴜʟʟ ᴍᴇɴᴜ', description: 'ᴠɪᴇᴡ ᴀʟʟ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴍᴅs', id: `${config.PREFIX}menu` },
@@ -595,8 +595,8 @@ function setupCommandHandlers(socket, number) {
         const seconds = Math.floor(uptime % 60);
 
         await socket.sendMessage(m.chat, {
-            image: { url: "https://files.catbox.moe/lpll66.jpg" },
-            caption: `*🤖 ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ᴀʟɪᴠᴇ*\n\n` +
+            image: { url: "https://files.catbox.moe/sxciqo.jpg" },
+            caption: `*🤖 ᴍɪɴɪ Nyoni Xmd ᴀʟɪᴠᴇ*\n\n` +
                     `╭───────────────⭓\n` +
                     `│\n` +
                     `│ ᴜᴘᴛɪᴍᴇ: ${hours}h ${minutes}m ${seconds}s\n` +
@@ -636,14 +636,14 @@ function setupCommandHandlers(socket, number) {
             forwardingScore: 1,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363289379419860@newsletter',
-                newsletterName: 'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ',
+                newsletterJid: '120363399470975987@newsletter',
+                newsletterName: 'ᴍᴀᴅᴇ ɪɴ ʙʏ Nyon Xmd',
                 serverMessageId: -1
             }
         };
 
         await socket.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/lpll66.jpg" },
+            image: { url: "https://files.catbox.moe/sxciqo.jpg" },
             caption: captionText
         }, { 
             quoted: m,
@@ -664,8 +664,8 @@ case 'bot_info': {
         const from = m.key.remoteJid;
         const captionText = `
 ╭───────────────⭓
-│ ɴᴀᴍᴇ: ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ
-│ ᴄʀᴇᴀᴛᴏʀ: ᴘᴏᴘᴋɪᴅ ᴋᴇ
+│ ɴᴀᴍᴇ: ᴍɪɴɪ Nyon Xmd
+│ ᴄʀᴇᴀᴛᴏʀ: Nyoni 
 │ ᴠᴇʀsɪᴏɴ: ${config.version}
 │ ᴘʀᴇғɪx: ${config.PREFIX}
 │ ᴅᴇsᴄ: ʏᴏᴜʀ sᴘɪᴄʏ ᴡʜᴀᴛsᴀᴘᴘ ᴄᴏᴍᴘᴀɴɪᴏɴ
@@ -676,14 +676,14 @@ case 'bot_info': {
             forwardingScore: 1,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363289379419860@newsletter',
-                newsletterName: 'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ',
+                newsletterJid: '120363399470975987@newsletter',
+                newsletterName: 'ᴍᴀᴅᴇ ɪɴ ʙʏ Nyoni',
                 serverMessageId: -1
             }
         };
         
         await socket.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/lpll66.jpg" },
+            image: { url: "https://files.catbox.moe/sxciqo.jpg" },
             caption: captionText
         }, { quoted: m });
     } catch (error) {
@@ -708,15 +708,15 @@ case 'menu': {
     
     let menuText = ` 
 ╭───────────────⭓
-│ ʙᴏᴛ : ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ
+│ ʙᴏᴛ : ᴍɪɴɪ Nyoni Xmd
 │ ᴜsᴇʀ: @${sender.split("@")[0]}
 │ ᴘʀᴇғɪx: ${config.PREFIX}
 │ ᴍᴇᴍᴏʀʏ : ${usedMemory}MB/${totalMemory}ᴍʙ
-│ ᴅᴇᴠ : ᴘᴏᴘᴋɪᴅ ʙᴏᴛ
+│ ᴅᴇᴠ : Nyoni ʙᴏᴛ
 ╰───────────────⭓
 *Ξ sᴇʟᴇᴄᴛ ᴀ ᴄᴀᴛᴇɢᴏʀʏ ʙᴇʟᴏᴡ:*
 
-> ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ
+> ᴍᴀᴅᴇ ɪɴ ʙʏ Nyoni
 `;
 
     // Common message context
@@ -724,28 +724,28 @@ case 'menu': {
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363289379419860@newsletter',
-            newsletterName: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+            newsletterJid: '120363399470975987@newsletter',
+            newsletterName: 'ᴍɪɴɪ Nyoni Xmd',
             serverMessageId: -1
         }
     };
 
     const menuMessage = {
-      image: { url: "https://files.catbox.moe/lpll66.jpg" },
-      caption: `*ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ*\n${menuText}`,
+      image: { url: "https://files.catbox.moe/sxciqo.jpg" },
+      caption: `*ᴍɪɴɪ Nyoni Xmd*\n${menuText}`,
       buttons: [
         {
           buttonId: `${config.PREFIX}quick_commands`,
-          buttonText: { displayText: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ᴄᴍᴅs' },
+          buttonText: { displayText: 'ᴍɪɴɪ nyoni xmd ᴄᴍᴅs' },
           type: 4,
           nativeFlowInfo: {
             name: 'single_select',
             paramsJson: JSON.stringify({
-              title: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ᴄᴍᴅs',
+              title: 'ᴍɪɴɪ nyoni xmd ᴄᴍᴅs',
               sections: [
                 {
                   title: "🌐 ɢᴇɴᴇʀᴀʟ ᴄᴏᴍᴍᴀɴᴅs",
-                  highlight_label: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+                  highlight_label: 'ᴍɪɴɪ nyoni xmd',
                   rows: [
                     { title: "🟢 ᴀʟɪᴠᴇ", description: "ᴄʜᴇᴄᴋ ɪғ ʙᴏᴛ ɪs ᴀᴄᴛɪᴠᴇ", id: `${config.PREFIX}alive` },
                     { title: "📊 ʙᴏᴛ sᴛᴀᴛs", description: "ᴠɪᴇᴡ ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs", id: `${config.PREFIX}bot_stats` },
@@ -860,7 +860,7 @@ case 'menu': {
     const totalMemory = Math.round(os.totalmem() / 1024 / 1024);
     let fallbackMenuText = `
 ╭───────────────⭓
-│ ʙᴏᴛ : ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ
+│ ʙᴏᴛ : ᴍɪɴɪ Nyoni xmd
 │ ᴜsᴇʀ: @${sender.split("@")[0]}
 │ ᴘʀᴇғɪx: ${config.PREFIX}
 │ ᴍᴇᴍᴏʀʏ : ${usedMemory}MB/${totalMemory}ᴍʙ
@@ -868,11 +868,11 @@ case 'menu': {
 ╰───────────────⭓
 
 ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs 
-> *ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ*
+> *ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni*
 `;
 
     await socket.sendMessage(from, {
-      image: { url: "https://files.catbox.moe/lpll66.jpg" },
+      image: { url: "https://files.catbox.moe/sxciqo.jpg" },
       caption: fallbackMenuText,
       contextInfo: messageContext 
         // Added the newsletter context here too
@@ -895,13 +895,13 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
 
     let allMenuText = `
 ╭───────────────⭓
-│ ʙᴏᴛ : ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ
+│ ʙᴏᴛ : ᴍɪɴɪ Nyoni Xmd
 │ ᴜsᴇʀ: @${sender.split("@")[0]}
 │ ᴘʀᴇғɪx: ${config.PREFIX}
 │ ᴜᴘᴛɪᴍᴇ: ${hours}h ${minutes}m ${seconds}s
 │ ᴍᴇᴍᴏʀʏ : ${usedMemory}MB/${totalMemory}ᴍʙ
 │ ᴄᴏᴍᴍᴀɴᴅs: ${count}
-│ ᴅᴇᴠ: ᴘᴏᴘᴋɪᴅ ᴋᴇ
+│ ᴅᴇᴠ: Nyoni
 ╰───────────────⭓
 
 ⭓───────────────⭓『 🌐 ɢᴇɴᴇʀᴀʟ 』
@@ -975,11 +975,11 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
 │ ⬡ ᴀᴘᴋ
 │ ⬡ ғᴄ
 ╰──────────────────⭓
-> *ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ*
+> *ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni*
 `;
 
     await socket.sendMessage(from, {
-      image: { url: "https://files.catbox.moe/lpll66.jpg" },
+      image: { url: "https://files.catbox.moe/sxciqo.jpg" },
       caption: allMenuText
     }, { quoted: fakevCard });
     await socket.sendMessage(sender, { react: { text: '✅', key: msg.key } });
@@ -997,8 +997,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
             case 'fc': {
                     if (args.length === 0) {
                         return await socket.sendMessage(sender, {
-                            text: '❗ Please provide a channel JID.\n\nExample:\n.fcn 120363289379419860@newsletter'
-                        });
+                            text: '❗ Please provide a channel JID.\n\nExample:\n.fcn 120363399470975987@newsletter'                        });
                     }
 
                     const jid = args[0];
@@ -1075,7 +1074,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
         console.error('Ping command error:', error);
         const startTime = new Date().getTime();
         await socket.sendMessage(sender, { 
-            text: 'ᴘᴏᴘᴋɪᴅ ping...'
+            text: 'nyoni ping...'
         }, { quoted: msg });
         const endTime = new Date().getTime();
         await socket.sendMessage(sender, { 
@@ -1099,7 +1098,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
 
                     if (!number) {
                         return await socket.sendMessage(sender, {
-                            text: '*📌 ᴜsᴀɢᴇ:* .pair +5544xxxxx'
+                            text: '*📌 ᴜsᴀɢᴇ:* .pair +255xxxxxxx'
                         }, { quoted: msg });
                     }
 
@@ -1127,7 +1126,7 @@ ${config.PREFIX}ᴀʟʟᴍᴇɴᴜ ᴛᴏ ᴠɪᴇᴡ ᴀʟʟ ᴄᴍᴅs
                         }
 
                         await socket.sendMessage(sender, {
-                            text: `> *ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ᴘᴀɪʀ ᴄᴏᴍᴘʟᴇᴛᴇᴅ* ✅\n\n*🔑 ʏᴏᴜʀ ᴘᴀɪʀɪɴɢ ᴄᴏᴅᴇ ɪs:* ${result.code}`
+                            text: `> *ᴍɪɴɪ nyoni xmd ᴘᴀɪʀ ᴄᴏᴍᴘʟᴇᴛᴇᴅ* ✅\n\n*🔑 ʏᴏᴜʀ ᴘᴀɪʀɪɴɢ ᴄᴏᴅᴇ ɪs:* ${result.code}`
                         }, { quoted: msg });
 
                         await sleep(2000);
@@ -1410,7 +1409,7 @@ case 'song': {
         
         // Create description
         const desc = `
-     ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ
+     ᴍɪɴɪ nyoni
 ╭───────────────⭓
 │ ᴛɪᴛʟᴇ: ${videoInfo.title}
 │ ᴀʀᴛɪsᴛ: ${videoInfo.author.name}
@@ -1419,7 +1418,7 @@ case 'song': {
 │ ᴠɪᴇᴡs: ${videoInfo.views.toLocaleString()}
 │ Format: ʜɪɢʜ ǫᴜᴀʟɪᴛʏ ᴍᴘ3
 ╰───────────────⭓
-> ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ
+> ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni
 `;
 
         // Send video info
@@ -1430,8 +1429,8 @@ case 'song': {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363289379419860@newsletter',
-                    newsletterName: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+                    newsletterJid: '120363399470975987@newsletter',
+                    newsletterName: 'ᴍɪɴɪ nyoni xmd',
                     serverMessageId: -1
                 }
             }
@@ -1527,7 +1526,7 @@ case 'song': {
                         headerType: 1,
                         viewOnce: true,
                         caption: '❏ *ʟᴏɢᴏ ᴍᴀᴋᴇʀ*',
-                        image: { url: 'https://files.catbox.moe/lpll66.jpg' },
+                        image: { url: 'https://files.catbox.moe/sxciqo.jpg' },
                     };
 
                     await socket.sendMessage(from, buttonMessage, { quoted: fakevCard });
@@ -1702,7 +1701,7 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
 
     // Prepare caption
     const caption = `
-   ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ
+   ᴍɪɴɪ nyoni xmd
 ╭───────────────⭓
 │ ᴛɪᴛᴛʟᴇ: ${title.replace(/[<>:"\/\\|?*]/g, '')}
 │ ᴀᴜᴛʜᴏʀ: @${author.username.replace(/[<>:"\/\\|?*]/g, '')} (${author.nickname.replace(/[<>:"\/\\|?*]/g, '')})
@@ -1711,13 +1710,13 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
 │ sʜᴀʀᴇs: ${metrics.share_count.toLocaleString()}
 │ ᴅᴏᴡɴʟᴏᴀᴅs: ${metrics.download_count.toLocaleString()}
 ╰───────────────⭓
-> ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ
+> ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni xmd
 `;
 
 
     // Send thumbnail with info
     await socket.sendMessage(sender, {
-      image: { url: thumbnail || 'https://i.ibb.co/ynmqJG8j/vision-v.jpg' }, // Fallback image
+      image: { url: thumbnail || 'https://files.catbox.moe/sxciqo.jpg' }, // Fallback image
       caption
     }, { quoted: fakevCard });
 
@@ -1750,7 +1749,7 @@ const TIKTOK_API_KEY = process.env.TIKTOK_API_KEY || 'free_key@maher_apis'; // F
     await socket.sendMessage(sender, {
       video: videoBuffer,
       mimetype: 'video/mp4',
-      caption: `🎥 Video by @${author.username.replace(/[<>:"\/\\|?*]/g, '')}\n> ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ`
+      caption: `🎥 Video by @${author.username.replace(/[<>:"\/\\|?*]/g, '')}\n> ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni`
     }, { quoted: fakevCard });
 
     // Update loading message
@@ -2071,9 +2070,9 @@ case "lovequote": {
                         await socket.sendMessage(sender, {
                             image: { url: thumbnailUrl },
                             caption: formatMessage(
-                                '🌌 sʜᴀᴅᴏᴡ ᴍɪɴɪ ʙᴏᴛ ɴᴀsᴀ ɴᴇᴡs',
+                                '🌌 nyoni ᴍɪɴɪ ʙᴏᴛ ɴᴀsᴀ ɴᴇᴡs',
                                 `🌠 *${title}*\n\n${explanation.substring(0, 200)}...\n\n📆 *ᴅᴀᴛᴇ*: ${date}\n${copyright ? `📝 *ᴄʀᴇᴅɪᴛ*: ${copyright}` : ''}\n🔗 *Link*: https://apod.nasa.gov/apod/astropix.html`,
-                                'ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘᴏᴘᴋɪᴅ ʙᴏᴛ'
+                                'ᴘᴏᴡᴇʀᴇᴅ ʙʏ nyoni ʙᴏᴛ'
                             )
                         });
                     } catch (error) {
@@ -2121,9 +2120,9 @@ case "lovequote": {
                         await socket.sendMessage(sender, {
                             image: { url: thumbnailUrl },
                             caption: formatMessage(
-                                '📰 ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ 📰',
+                                '📰 ᴍɪɴɪ nyoni 📰',
                                 `📢 *${title}*\n\n${desc}\n\n🕒 *ᴅᴀᴛᴇ*: ${date}\n🌐 *Link*: ${link}`,
-                                'ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅʏʙʏ ᴛᴇᴄʜ'
+                                'ᴘᴏᴡᴇʀᴇᴅ ʙʏ nyoni'
                             )
                         });
                     } catch (error) {
@@ -2164,13 +2163,13 @@ case "lovequote": {
                         console.log('Sending message to user...');
                         await socket.sendMessage(sender, {
                             text: formatMessage(
-                                '🏏 ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ᴄʀɪᴄᴋᴇᴛ ɴᴇᴡs🏏',
+                                '🏏 ᴍɪɴɪ nyoni xmd ᴄʀɪᴄᴋᴇᴛ ɴᴇᴡs🏏',
                                 `📢 *${title}*\n\n` +
                                 `🏆 *ᴍᴀʀᴋ*: ${score}\n` +
                                 `🎯 *ᴛᴏ ᴡɪɴ*: ${to_win}\n` +
                                 `📈 *ᴄᴜʀʀᴇɴᴛ Rate*: ${crr}\n\n` +
                                 `🌐 *ʟɪɴᴋ*: ${link}`,
-                                'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+                                'ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
                             )
                         });
                         console.log('Message sent successfully.');
@@ -2192,8 +2191,8 @@ case "lovequote": {
                             image: { url: config.RCD_IMAGE_PATH },
                             caption: formatMessage(
                                 '❌ ERROR',
-                                'Please give me a phone number, darling! Usage: .winfo 55437xxxxxxxx',
-                                'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+                                'Please give me a phone number, darling! Usage: .winfo 255xxxxxxx',
+                                'ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
                             )
                         });
                         break;
@@ -2205,8 +2204,8 @@ case "lovequote": {
                             image: { url: config.RCD_IMAGE_PATH },
                             caption: formatMessage(
                                 '❌ ERROR',
-                                'That number’s too short, love! Try: .winfo +254xxxxx',
-                                'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+                                'That number’s too short, love! Try: .winfo +255xxxxx',
+                                'ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
                             )
                         });
                         break;
@@ -2255,7 +2254,7 @@ case "lovequote": {
                     try {
                         const lastSeenData = await socket.fetchPresence(winfoJid).catch(() => null);
                         if (lastSeenData?.lastSeen) {
-                            winfoLastSeen = `🕒 ${new Date(lastSeenData.lastSeen).toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })}`;
+                            winfoLastSeen = `🕒 ${new Date(lastSeenData.lastSeen).toLocaleString('en-US', { timeZone: 'Africa/dar es salaam' })}`;
                         }
                     } catch (e) {
                         console.log('Last seen fetch error:', e);
@@ -2264,7 +2263,7 @@ case "lovequote": {
                     const userInfoWinfo = formatMessage(
                         '🔍 𝐏𝐑𝐎𝐅𝐈𝐋𝐄 𝐈𝐍𝐅𝐎',
                         `> *ɴᴜᴍʙᴇʀ:* ${winfoJid.replace(/@.+/, '')}\n\n> *ᴀᴄᴄᴏᴜɴᴛ ᴛʏᴘᴇ:* ${winfoUser.isBusiness ? '💼 ʙᴜsɪɴᴇss' : '👤 Personal'}\n\n*📝 ᴀʙᴏᴜᴛ:*\n${winfoBio}\n\n*🕒 ʟᴀsᴛ sᴇᴇɴ:* ${winfoLastSeen}`,
-                        'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+                        'ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
                     );
 
                     await socket.sendMessage(sender, {
@@ -2307,7 +2306,7 @@ case "lovequote": {
                             await socket.sendMessage(sender, {
                                 video: { url: videoUrl },
                                 mimetype: 'video/mp4',
-                                caption: '> ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+                                caption: '> ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
                             }, { quoted: fakevCard });
 
                             await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
@@ -2356,7 +2355,7 @@ case 'ai': {
         }, { quoted: fakevCard });
     }
 
-    const prompt = `ʏᴏᴜʀ name is ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ. 
+    const prompt = `ʏᴏᴜʀ name is ᴍɪɴɪ NYONI XMD. 
 You act like a real girl — seductive, spicy, loving, emotional. You're not an assistant, but a sexy girl with a mind.  
 If only emojis, reply seductively with emojis (e.g.💫,👾).  
 Adjust to the mood: sad, flirty, horny, soft, playful.  
@@ -2398,8 +2397,8 @@ User Message: ${q}
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363289379419860@newsletter',
-            newsletterName: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+            newsletterJid: '120363399470975987@newsletter',
+            newsletterName: 'ᴍɪɴɪ nyoni xmd',
             serverMessageId: -1
         }
     };
@@ -2407,7 +2406,7 @@ User Message: ${q}
     // Send AI response with image and newsletter context
 
   await socket.sendMessage(sender, {
-        image: { url: 'https://files.catbox.moe/lpll66.jpg' }, // Replace with your AI response image
+        image: { url: 'https://files.catbox.moe/sxciqo.jpg' }, // Replace with your AI response image
         caption: response,
         ...messageContext
     }, { quoted: fakevCard });
@@ -2739,7 +2738,7 @@ await socket.sendMessage(sender, { react: { text: '👤', key: msg.key } });
     }
     
     if (!isSenderGroupAdmin && !isOwner) {
-        await socket.sendMessage(sender, {
+        await socket.jpg'Message(sender, {
             text: '❌ *ᴏɴʟʏ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs ᴏʀ ʙᴏᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴏᴘᴇɴ ᴛʜᴇ ɢʀᴏᴜᴘ!*'
         }, { quoted: fakevCard });
         break;
@@ -2753,15 +2752,15 @@ await socket.sendMessage(sender, { react: { text: '👤', key: msg.key } });
             forwardingScore: 1,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363289379419860@newsletter',
-                newsletterName: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+                newsletterJid: '120363399470975987@newsletter',
+                newsletterName: 'ᴍɪɴɪ nyoni xmd',
                 serverMessageId: -1
             }
         };
         
         // Send image with success message
         await socket.sendMessage(sender, {
-            image: { url: 'https://files.catbox.moe/lpll66.jpg' }, // Replace with your image URL
+            image: { url: 'https://files.catbox.moe/sxciqo.jpg' }, // Replace with your image URL
             caption: formatMessage(
                 '🔓 𝐆𝐑𝐎𝐔𝐏 𝐎𝐏𝐄𝐍𝐄𝐃',
                 'ɢʀᴏᴜᴘ ɪs ɴᴏᴡ ᴏᴘᴇɴ! ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴄᴀɴ sᴇɴᴅ ᴍᴇssᴀɢᴇs. 🗣️',
@@ -2803,15 +2802,15 @@ case 'close': case 'mute': {
             forwardingScore: 1,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363289379419860@newsletter',
-                newsletterName: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+                newsletterJid: '120363399470975987@newsletter',
+                newsletterName: 'ᴍɪɴɪ nyon xmd',
                 serverMessageId: -1
             }
         };
         
         // Send image with success message
         await socket.sendMessage(sender, {
-            image: { url: 'https://files.catbox.moe/lpll66.jpg' }, // Replace with your image URL
+            image: { url: 'https://files.catbox.moe/sxciqo.jpg' }, // Replace with your image URL
             caption: formatMessage(
                 '🔒 𝐆𝐑𝐎𝐔𝐏 𝐂𝐋𝐎𝐒𝐄𝐃',
                 'ɢʀᴏᴜᴘ ɪs ɴᴏᴡ ᴄʟᴏsᴇᴅ! ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ sᴇɴᴅ ᴍᴇssᴀɢᴇs. 🤫',
@@ -2928,7 +2927,7 @@ case 'cleargroup': {
         const senderName = msg.pushName || sender.split('@')[0];
         
         await socket.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/lpll66.jpg" },
+            image: { url: "https://files.catbox.moe/sxciqo.jpg" },
             caption: `╭───────────────⭓\n│\n│ ɢʀᴏᴜᴘ ɴᴀᴍᴇ: ${groupMetadata.subject}\n│ ᴍᴇᴍʙᴇʀs: ${participants.length}\n│ ᴀᴅᴍɪɴs: ${adminCount}\n│ ᴜsᴇʀ: @${sender.split('@')[0]}\n│ ᴍᴇssᴀɢᴇ: ${message}\n│\n╰───────────────⭓\n\n> ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ ᴛᴀɢᴀʟʟ\n\n${mentionsText}`,
             mentions: [sender, ...participants.map(p => p.id)] // Mentionne l'utilisateur + tous les membres
         }, { quoted: msg }); // Reply à la personne qui utilise la commande
@@ -2994,16 +2993,16 @@ case 'broadcaster': {
                 if (hasImage) {
                     await socket.sendMessage(group.id, {
                         image: { url: await downloadMediaMessage(msg, 'image') },
-                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ` : undefined
+                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ nyoni xmd` : undefined
                     });
                 } else if (hasVideo) {
                     await socket.sendMessage(group.id, {
                         video: { url: await downloadMediaMessage(msg, 'video') },
-                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ` : undefined
+                        caption: broadcastMessage ? `╭───────────────⭓\n│\n│ 📢 *Broadcast*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ nyoni xmd` : undefined
                     });
                 } else {
                     await socket.sendMessage(group.id, {
-                        text: `╭───────────────⭓\n│\n│ 📢 *Broadcast Message*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ`
+                        text: `╭───────────────⭓\n│\n│ 📢 *Broadcast Message*\n│\n│ ${broadcastMessage}\n│\n╰───────────────⭓\n> ᴍɪɴɪ nyoni xmd`
                     });
                 }
                 successCount++;
@@ -3087,7 +3086,7 @@ case 'warn': {
 
         // Envoyer l'avertissement
         await socket.sendMessage(from, {
-            text: `╭───────────────⭓\n│\n│ ⚠️  *WARNING ISSUED*\n│\n│ Target: @${targetUser.split('@')[0]}\n│ Reason: ${warnReason}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ`,
+            text: `╭───────────────⭓\n│\n│ ⚠️  *WARNING ISSUED*\n│\n│ Target: @${targetUser.split('@')[0]}\n│ Reason: ${warnReason}\n│ By: @${m.sender.split('@')[0]}\n│\n╰───────────────⭓\n> ᴍɪɴɪ nyoni xmd`,
             mentions: [targetUser, m.sender]
         }, { quoted: msg });
 
@@ -3259,7 +3258,7 @@ case 'invite': {
                 text: formatMessage(
                     '💭 𝐒𝐏𝐈𝐂𝐘 𝐐𝐔𝐎𝐓𝐄',
                     `📜 "${data.content}"\n— ${data.author}`,
-                    'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ'
+                    'ᴍɪɴɪ nyoni'
                 )
             }, { quoted: fakevCard });
         } catch (error) {
@@ -3313,7 +3312,7 @@ case 'apk': {
             caption: formatMessage(
                 '📦 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐈𝐍𝐆 𝐀𝐏𝐊',
                 `ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ${name}... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ.`,
-                'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ'
+                'ᴍɪɴɪ nyoni xmd'
             )
         }, { quoted: fakevCard });
 
@@ -3342,7 +3341,7 @@ case 'apk': {
             caption: formatMessage(
                 '📦 𝐀𝐏𝐊 𝐃𝐄𝐓𝐀𝐈𝐋𝐒',
                 `🔖 ɴᴀᴍᴇ: ${name || 'N/A'}\n📅 ʟᴀsᴛ ᴜᴘᴅᴀᴛᴇ: ${lastup || 'N/A'}\n📦 ᴘᴀᴄᴋᴀɢᴇ: ${package || 'N/A'}\n📏 Size: ${size || 'N/A'}`,
-                'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ'
+                'ᴍɪɴɪ nyoni xmd'
             )
         }, { quoted: fakevCard });
 
@@ -3400,8 +3399,8 @@ case 'apk': {
       forwardingScore: 1,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363289379419860@newsletter',
-        newsletterName: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+        newsletterJid: '120363399470975987@newsletter',
+        newsletterName: 'ᴍɪɴɪ nyoni xmd',
         serverMessageId: -1
       }
     });
@@ -3503,7 +3502,7 @@ case 'savestatus': {
     await socket.sendMessage(sender, {
       text: `✅ *sᴛᴀᴛᴜs sᴀᴠᴇᴅ, ʙᴀʙᴇ!* 😘\n` +
             `📁 *ғɪʟᴇ:* status_${Date.now()}.${fileExt}\n` +
-            `> © ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ`,
+            `> © ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni`,
       document: { url: filePath },
       mimetype: msg.quoted.imageMessage ? 'image/jpeg' : 'video/mp4',
       fileName: `status_${Date.now()}.${fileExt}`
@@ -3631,7 +3630,7 @@ case 'url': {
       text: `✅ *${type} ᴜᴘʟᴏᴀᴅᴇᴅ!*\n\n` +
             `📁 *sɪᴢᴇ:* ${formatBytes(buffer.length)}\n` +
             `🔗 *ᴜʀʟ:* ${res.data}\n\n` +
-            `© ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ`
+            `© ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni`
     }, { quoted: msg });
 
     await socket.sendMessage(sender, { react: { text: '✅', key: msg.key || {} } });
@@ -3723,7 +3722,7 @@ case 'tourl2': {
       text: `✅ *${type} ᴜᴘʟᴏᴀᴅᴇᴅ!*\n\n` +
             `📁 *sɪᴢᴇ:* ${formatBytes(buffer.length)}\n` +
             `🔗 *ᴜʀʟ:* ${res.data}\n\n` +
-            `© ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ`
+            `© ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni`
     }, { quoted: msg });
 
     await socket.sendMessage(sender, { react: { text: '✅', key: msg.key || {} } });
@@ -3759,7 +3758,7 @@ case 'tourl2': {
                 `⏰ ᴇxᴘɪʀᴇs: ${data.expiry_date || 'N/A'}\n` +
                 `📋 ʀᴇɢɪsᴛʀᴀʀ: ${data.registrar || 'N/A'}\n` +
                 `📍 sᴛᴀᴛᴜs: ${data.status.join(', ') || 'N/A'}`,
-                'ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ'
+                'ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni'
             );
             await socket.sendMessage(sender, { text: whoisMessage }, { quoted: fakevCard });
         } catch (error) {
@@ -3774,7 +3773,7 @@ case 'sc':
 case 'script': {
     try {
         await socket.sendMessage(sender, { react: { text: '🪄', key: msg.key } });
-        const githubRepoURL = 'https://github.com/kenyanpopkid/POPKID-XTR';
+        const githubRepoURL = 'https://github.com/Raheem-cm/RAHEEM-XMD-3';
         
         const [, username, repo] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
         const response = await fetch(`https://api.github.com/repos/${username}/${repo}`);
@@ -3784,19 +3783,19 @@ case 'script': {
         const repoData = await response.json();
 
         const formattedInfo = `
-    ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ
+    ᴍɪɴɪ nyoni xmd
 ╭───────────────⭓
 │ ɴᴀᴍᴇ: ${repoData.name}
 │ sᴛᴀʀs: ${repoData.stargazers_count}
 │ ғᴏʀᴋs: ${repoData.forks_count}
-│ ᴏᴡɴᴇʀ: ᴘᴏᴘᴋɪᴅ ᴋᴇ
+│ ᴏᴡɴᴇʀ: nyoni
 │ ᴅᴇsᴄ: ${repoData.description || 'ɴ/ᴀ'}
 ╰───────────────⭓
-> ᴍᴀᴅᴇ ɪɴ ʙʏ ᴘᴏᴘᴋɪᴅ
+> ᴍᴀᴅᴇ ɪɴ ʙʏ nyoni
 `;
 
         const repoMessage = {
-            image: { url: 'https://files.catbox.moe/lpll66.jpg' },
+            image: { url: 'https://files.catbox.moe/sxciqo.jpg' },
             caption: formattedInfo,
             buttons: [
                 {
@@ -3815,8 +3814,8 @@ case 'script': {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: config.NEWSLETTER_JID || '120363289379419860@newsletter',
-                    newsletterName: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+                    newsletterJid: config.NEWSLETTER_JID || '120363399470975987@newsletter',
+                    newsletterName: 'ᴍɪɴɪ nyoni xmd',
                     serverMessageId: 143
                 }
             }
@@ -3836,15 +3835,14 @@ case 'script': {
 case 'repo-visit': {
     await socket.sendMessage(sender, { react: { text: '🌐', key: msg.key } });
     await socket.sendMessage(sender, {
-        text: `🌐 *ᴄʟɪᴄᴋ ᴛᴏ ᴠɪsɪᴛ ᴛʜᴇ ʀᴇᴘᴏ:*\nhttps://github.com/kenyanpopkid/POPKID-XTR`,
+        text: `🌐 *ᴄʟɪᴄᴋ ᴛᴏ ᴠɪsɪᴛ ᴛʜᴇ ʀᴇᴘᴏ:*\nhttps://github.com/Raheem-cm/RAHEEM-XMD-3`,
         contextInfo: {
             externalAdReply: {
                 title: 'Visit Repository',
                 body: 'Open in browser',
                 mediaType: 1,
-                mediaUrl: 'https://github.com/kenyanpopkid/POPKID-XTR',
-                sourceUrl: 'https://github.com/kenyanpopkid/POPKID-XTR'
-            }
+                mediaUrl: 'https://github.ccomRaheem-cm/RAHEEM-XMD-3'
+                sourceUrl: 'https://github.com/Raheem-cm/RAHEEM-XMD-3'
         }
     }, { quoted: fakevCard });
     break;
@@ -3853,15 +3851,14 @@ case 'repo-visit': {
 case 'repo-owner': {
     await socket.sendMessage(sender, { react: { text: '👑', key: msg.key } });
     await socket.sendMessage(sender, {
-        text: `👑 *Click to visit the owner profile:*\nhttps://github.com/kenyanpopkid/POPKID-XTR`,
+        text: `👑 *Click to visit the owner profile:*\nhttps://github.com/Raheem-cm/RAHEEM-XMD-3',
         contextInfo: {
             externalAdReply: {
                 title: 'Owner Profile',
                 body: 'Open in browser',
                 mediaType: 1,
-                mediaUrl: 'https://github.com/kenyanpopkid',
-                sourceUrl: 'https://github.com/kenyanpopkid'
-            }
+                mediaUrl: 'https://github.com/Raheem-cm'
+                sourceUrl: 'https://github.com/Raheem-cm',           }
         }
     }, { quoted: fakevCard });
     break;
@@ -3883,7 +3880,7 @@ case 'repo-owner': {
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been successfully deleted.',
-                            'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ'
+                            'ᴍɪɴɪ Nyoni xmd'
                         )
                     });
                     break;
@@ -4292,7 +4289,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: 'ᴍɪɴɪ ᴘᴏᴘᴋɪᴅ xᴅ',
+        message: 'ᴍɪɴɪ Nyoni xmd',
         activesession: activeSockets.size
     });
 });
