@@ -1,5 +1,5 @@
 {
-  "name": "MINI-INCONNU-XD",
+  "name": "NYON-XMD",
   "version": "1.0.0",
   "description": "WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
@@ -45,6 +45,6 @@
     "baileys",
     "megalodon-xd"
   ],
-  "author": "INCONNU BOY",
+  "author": "Raheem-cm",
   "license": "MIT"
 }
