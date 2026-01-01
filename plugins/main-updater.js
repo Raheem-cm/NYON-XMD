@@ -19,21 +19,21 @@ cmd({
         await reply("*🔍 CHECKING FOR UPDATES...*");
 
         // Fetch the latest commit hash from GitHub
-        const { data: commitData } = await axios.get("https://api.github.com/repos/1122bot/BILAL-MD-MINI-BOT-V11/commits/main");
+        const { data: commitData } = await axios.get("https://api.github.com/repos/Raheem-cm/NYON-XMD/commits/main");
         const latestCommitHash = commitData.sha;
 
         // Get the stored commit hash from the database
         const currentHash = await getCommitHash();
 
         if (latestCommitHash === currentHash) {
-            return reply("*✅ YOUR BILAL MD BOT IS ALREADY UP-TO-DATE !*");
+            return reply("*✅ YOUR NYON XMD BOT IS ALREADY UP-TO-DATE !*");
         }
 
-        await reply("*🚀 UPDATING Bilal Md BOT...*");
+        await reply("*🚀 UPDATING nyoni xmd BOT...*");
 
         // Download the latest code
         const zipPath = path.join(__dirname, "latest.zip");
-        const { data: zipData } = await axios.get("https://github.com/1122bot/BILAL-MD-MINI-BOT-V11/archive/main.zip", { responseType: "arraybuffer" });
+        const { data: zipData } = await axios.get("https://github.com/Raheem-cmNYON-XMD/archive/main.zip", { responseType: "arraybuffer" });
         fs.writeFileSync(zipPath, zipData);
 
         // Extract ZIP file
@@ -44,7 +44,7 @@ cmd({
 
         // Copy updated files, preserving config.js and app.json
         await reply("*🔄 REPLACING FILES...*");
-        const sourcePath = path.join(extractPath, "RAHEEM-XMD-3-main");
+        const sourcePath = path.join(extractPath, "NYON-XMD-main");
         const destinationPath = path.join(__dirname, '..');
         copyFolderSync(sourcePath, destinationPath);
 
