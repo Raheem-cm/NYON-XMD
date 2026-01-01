@@ -20,7 +20,7 @@ cmd({
 
         const fancyMsg = `
 ╔══════════════╗
-     ♪  *Bilal plays* ♪
+     ♪  *NYONI PLAY* ♪
 ╠══════════════╣
   > *ᴛɪᴛʟᴇ:* ${data.title}
   > *ᴅᴜʀᴀᴛɪᴏɴ:* ${data.timestamp}
