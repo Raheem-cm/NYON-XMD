@@ -27,7 +27,7 @@ async(socket, m, { config, activeSockets, socketCreationTime, number, fakevCard,
         const uptime = runtime(Math.floor((Date.now() - startTime) / 1000));
 
         const captionText = `
-   \`BILAL 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓\`                  
+   \`NYON 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓\`                  
 *╭─────────────────⊷*
 *│* ʙᴏᴛ ᴜᴘᴛɪᴍᴇ: ${uptime}
 *│* ᴀᴄᴛɪᴠᴇ ʙᴏᴛs: ${activeSockets.size}
@@ -36,12 +36,12 @@ async(socket, m, { config, activeSockets, socketCreationTime, number, fakevCard,
 *│* ᴍᴇᴍᴏʀʏ ᴜsᴀɢᴇ: ${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}ᴍʙ
 *╰───────────────┈⊷*
 
-> *▫️sʜᴀᴅᴏᴡ ᴍɪɴɪ ᴍᴀɪɴ*
+> *▫️nyon xmd ᴍᴀɪɴ*
 > ʀᴇsᴘᴏɴᴅ ᴛɪᴍᴇ: ${Date.now() - m.messageTimestamp * 1000}ms`;
 
         const aliveMessage = {
-            image: { url: config.IMAGE_PATH || 'https://pmd-img2url.koyeb.app/v/5c5d26adccf9cd517453ca6a8de11a7e.jpg' },
-            caption: `> ᴀᴍ ᴀʟɪᴠᴇ ɴn ᴋɪᴄᴋɪɴɢ 👾\n\n${captionText}`,
+            image: { url: config.IMAGE_PATH || 'https://files.catbox.moe/ph4c1n.jpg' },
+            caption: `> ᴀᴍ ᴀʟɪᴠᴇ here nyoni xmd 👾\n\n${captionText}`,
             buttons: [
                 {
                     buttonId: `${prefix}menu`,
