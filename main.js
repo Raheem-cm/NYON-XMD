@@ -12,7 +12,8 @@ const googleTTS = require("google-tts-api");
 const mongoose = require('mongoose');
 
 // MongoDB Configuration
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://kxshrii:i7sgjXF6SO2cTJwU@kelumxz.zggub8h.mongodb.net/';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://kaviduinduwara:kavidu2008@cluster0.bqmspdf.mongodb.net/soloBot?retryWrites=true&w=majority&appName=Cluster0';
+ ';
 
 // Connect to MongoDB
 mongoose.connect(MONGODB_URI, {
