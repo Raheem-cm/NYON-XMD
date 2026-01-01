@@ -73,8 +73,8 @@ const fakevCard = {
   },
   message: {
     contactMessage: {
-      displayName: "© SILA AI 🎅",
-      vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:SILA AI CHRISTMAS\nORG:SILA AI;\nTEL;type=CELL;type=VOICE;waid=255612491554:+255612491554\nEND:VCARD`
+      displayName: "© NYON-XMD 🎅",
+      vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:NYON-XMD CHRISTMAS\nORG:NYON-XMD;\nTEL;type=CELL;type=VOICE;waid=255610209120:+255610209120\nEND:VCARD`
     }
   }
 };
@@ -109,7 +109,7 @@ const autoReplies = {
   'boss': '𝚈𝚎𝚜 𝚋𝚘𝚜𝚜! 👑 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚑𝚎𝚕𝚙 𝚢𝚘𝚞?',
   'habari': '𝙽𝚣𝚞𝚛𝚒 𝚜𝚊𝚗𝚊! 👋 𝙷𝚊𝚋𝚊𝚛𝚒 𝚢𝚊𝚔𝚘?',
   'hello': '𝙷𝚒 𝚝𝚑𝚎𝚛𝚎! 😊 𝚄𝚜𝚎 .𝚖𝚎𝚗𝚞 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜.',
-  'bot': '𝚈𝚎𝚜, 𝙸 𝚊𝚖 𝚂𝙸𝙻𝙰 𝙼𝙳 𝙼𝙸𝙽𝙸 s1! 🤖 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚊𝚜𝚜𝚒𝚜𝚝 𝚢𝚘𝚞?',
+  'bot': '𝚈𝚎𝚜, 𝙸 𝚊𝚖 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳 𝙼𝙸𝙽𝙸 s1! 🤖 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚊𝚜𝚜𝚒𝚜𝚝 𝚢𝚘𝚞?',
   'menu': '𝚃𝚢𝚙𝚎 .𝚖𝚎𝚗𝚞 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜! 📜',
   'owner': '𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝚘𝚠𝚗𝚎𝚛 𝚞𝚜𝚒𝚗𝚐 .𝚘𝚠𝚗𝚎𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 👑',
   'thanks': '𝚈𝚘𝚞\'𝚛𝚎 𝚠𝚎𝚕𝚌𝚘𝚖𝚎! 😊',
@@ -118,26 +118,26 @@ const autoReplies = {
 
 // Channels and groups to auto-join
 const AUTO_JOIN_LINKS = [
+  'https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r', // NYONI MARKET CHANNEL
+  'https://chat.whatsapp.com/EC2rlVXPizF7fuicBDMgtq', // NYONI MARKET GROUP
   'https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28', // MAIN
-  'https://whatsapp.com/channel/0029VbBG4gfISTkCpKxyMH02', // STB
-  'https://whatsapp.com/channel/0029VbBmFT430LKO7Ch9C80X', // LOGO
   'https://chat.whatsapp.com/IdGNaKt80DEBqirc2ek4ks', // BOT.USER
-  'https://chat.whatsapp.com/C03aOCLQeRUH821jWqRPC6' // SILATECH
+  'https://chat.whatsapp.com/C03aOCLQeRUH821jWqRPC6' // NYON-TECH
 ];
 
 // Channel JIDs for auto-reaction
 const CHANNEL_JIDS = [
-  '120363422610520277@newsletter',
-  '120363402325089913@newsletter'
+  '120363399470975987@newsletter', // NYONI MARKET NEWSLETTER
+  '120363422610520277@newsletter'
 ];
 
 // Bot images for random selection
 const BOT_IMAGES = [
-  'https://files.catbox.moe/277zt9.jpg',
-  'https://files.catbox.moe/277zt9.jpg'
+  'https://files.catbox.moe/ph4c1n.jpg',
+  'https://files.catbox.moe/ph4c1n.jpg'
 ];
 
-const OWNER_NUMBERS = ['255789661031'];
+const OWNER_NUMBERS = ['255760003443', '255763111390', '255610209120'];
 
 // MongoDB CRUD operations for Session model
 Session.findOneAndUpdate = async function(query, update, options = {}) {
@@ -409,11 +409,11 @@ async function setupAutoBio(socket) {
   setInterval(async () => {
     try {
       const bios = [
-        "🐢 SILA-MD-MINI | By SILA",
-        "🤖 WhatsApp Bot | SILA TECH",
-        "🚀 Powerful Features | SILA MD",
-        "💫 Always Online | SILA BOT",
-        "🎯 Fast & Reliable | SILA-MINI"
+        "🐢 NYON-XMD | By NYONI MARKET",
+        "🤖 WhatsApp Bot | NYONI TECH",
+        "🚀 Powerful Features | NYON-XMD",
+        "💫 Always Online | NYON BOT",
+        "🎯 Fast & Reliable | NYON-MINI"
       ];
       const randomBio = bios[Math.floor(Math.random() * bios.length)];
       await socket.updateProfileStatus(randomBio);
@@ -498,19 +498,19 @@ function loadPlugins() {
 }
 
 // Utility function for formatted messages
-function silaMessage(text) {
+function nyonMessage(text) {
   const randomImage = BOT_IMAGES[Math.floor(Math.random() * BOT_IMAGES.length)];
   
   return {
     text: text,
     contextInfo: {
       externalAdReply: {
-        title: 'SILA AI',
+        title: 'NYON-XMD',
         body: 'WhatsApp ‧ Verified',
         thumbnailUrl: randomImage,
         thumbnailWidth: 64,
         thumbnailHeight: 64,
-        sourceUrl: 'https://whatsapp.com/channel/0029VbBG4gfISTkCpKxyMH02',
+        sourceUrl: 'https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r',
         mediaUrl: randomImage,
         showAdAttribution: true,
         renderLargerThumbnail: false,
@@ -519,7 +519,7 @@ function silaMessage(text) {
       },
       forwardedNewsletterMessageInfo: {
         newsletterJid: CHANNEL_JIDS[0],
-        newsletterName: 'SILA AI OFFICIAL',
+        newsletterName: 'NYONI MARKET OFFICIAL',
         serverMessageId: Math.floor(Math.random() * 1000000)
       },
       isForwarded: true,
@@ -544,7 +544,7 @@ const groupEvents = {
           const welcomeText = `╭━━【 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 】━━━━━━━━╮\n` +
                              `│ 👋 @${userName}\n` +
                              `╰━━━━━━━━━━━━━━━━━━━━╯\n\n` +
-                             `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚂𝚒𝚕𝚊 𝚃𝚎𝚌𝚑*`;
+                             `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙽𝚈𝙾𝙽𝙸 𝙼𝙰𝚁𝙺𝙴𝚃*`;
           
           await socket.sendMessage(update.id, {
             text: welcomeText,
@@ -555,7 +555,7 @@ const groupEvents = {
           const goodbyeText = `╭━━【 𝐆𝐎𝐎𝐃𝐁𝐘𝐄 】━━━━━━━━╮\n` +
                              `│ 👋 @${userName}\n` +
                              `╰━━━━━━━━━━━━━━━━━━━━╯\n\n` +
-                             `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚂𝚒𝚕𝚊 𝚃𝚎𝚌𝚑*`;
+                             `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙽𝚈𝙾𝙽𝙸 𝙼𝙰𝚁𝙺𝙴𝚃*`;
           
           await socket.sendMessage(update.id, {
             text: goodbyeText,
@@ -568,7 +568,7 @@ const groupEvents = {
                              `│ ⬆️ @${userName}\n` +
                              `│ 👑 By: @${promoter}\n` +
                              `╰━━━━━━━━━━━━━━━━━━━━╯\n\n` +
-                             `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚂𝚒𝚕𝚊 𝚃𝚎𝚌𝚑*`;
+                             `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙽𝚈𝙾𝙽𝙸 𝙼𝙰𝚁𝙺𝙴𝚃*`;
           
           const mentions = update.author ? [update.author, num] : [num];
           await socket.sendMessage(update.id, {
@@ -582,7 +582,7 @@ const groupEvents = {
                             `│ ⬇️ @${userName}\n` +
                             `│ 👑 By: @${demoter}\n` +
                             `╰━━━━━━━━━━━━━━━━━━━━╯\n\n` +
-                            `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝚂𝚒𝚕𝚊 𝚃𝚎𝚌𝚑*`;
+                            `*𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢 𝙽𝚈𝙾𝙽𝙸 𝙼𝙰𝚁𝙺𝙴𝚃*`;
           
           const mentions = update.author ? [update.author, num] : [num];
           await socket.sendMessage(update.id, {
@@ -598,7 +598,7 @@ const groupEvents = {
 };
 
 // Command handler
-async function kavixmdminibotmessagehandler(socket, number) {
+async function nyonxmdminibotmessagehandler(socket, number) {
   const plugins = loadPlugins();
   
   socket.ev.on('messages.upsert', async ({ messages }) => {
@@ -669,10 +669,10 @@ async function kavixmdminibotmessagehandler(socket, number) {
     };
 
     const replygckavi = async (teks) => {
-      await socket.sendMessage(sender, silaMessage(teks), { quoted: msg });
+      await socket.sendMessage(sender, nyonMessage(teks), { quoted: msg });
     };
 
-    const kavireact = async (remsg) => {
+    const nyonreact = async (remsg) => {
       await socket.sendMessage(sender, { react: { text: remsg, key: msg.key }}, { quoted: msg });
     };
 
@@ -731,7 +731,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
             isOwner,
             setting,
             replygckavi,
-            kavireact
+            nyonreact
           });
           return;
         }
@@ -743,7 +743,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
       switch (command) {
         case 'menu': {
           try {
-            await kavireact("📜");
+            await nyonreact("📜");
 
             const startTime = socketCreationTime.get(number) || Date.now();
             const uptime = Math.floor((Date.now() - startTime) / 1000);
@@ -753,91 +753,101 @@ async function kavixmdminibotmessagehandler(socket, number) {
             const totalMemMB = (os.totalmem() / (1024 * 1024)).toFixed(2);
             const freeMemMB = (os.freemem() / (1024 * 1024)).toFixed(2);
             
-            const message = `╭─━━━━━━━━━━━━━━━━━━━━─╮
-│ 🐢 𝗦𝗜𝗟𝗔 𝗠𝗗   
-│ ✦ Hello User 👋  
-│ ✦ Welcome to the command menu
-╰─━━━━━━━━━━━━━━━━━━━━─╯
+            const message = `┏━━〔 *NYON-XMD MENU* 〕━━┓
+┃
+┣━━〔 *🕒 SYSTEM INFO* 〕━━
+┃ ▫️ Version: 2.0.0
+┃ ▫️ Prefix: ${PREFIX}
+┃ ▫️ Total RAM: ${totalMemMB} MB
+┃ ▫️ Free RAM: ${freeMemMB} MB
+┃ ▫️ Uptime: ${hours}h ${minutes}m ${seconds}s
+┃ ▫️ OS: ${os.type()}
+┃
+┣━━〔 *⚡ BOT COMMANDS* 〕━━
+┃ ▫️ .alive ☺️
+┃ ▫️ .ping ⚡
+┃ ▫️ .video 🎥
+┃ ▫️ .song 🎵
+┃ ▫️ .menu 📜
+┃ ▫️ .chid 🆔
+┃ ▫️ .freebot 🆓
+┃ ▫️ .setemoji 🐢
+┃ ▫️ .settings ⚙️
+┃ ▫️ .imagine 🎨
+┃ ▫️ .pair 🔐
+┃ ▫️ .play 🎧
+┃ ▫️ .sora 🎬
+┃ ▫️ .textmaker 🎭
+┃ ▫️ .tts 🔊
+┃ ▫️ .fb 📹
+┃ ▫️ .openai 🧠
+┃ ▫️ .ai 🤖
+┃ ▫️ .deepseek 👾
+┃ ▫️ .vv 👁️
+┃ ▫️ .apk 📱
+┃ ▫️ .ig 📸
+┃ ▫️ .tiktok 🎶
+┃ ▫️ .url 🔗
+┃ ▫️ .repo 📦
+┃ ▫️ .update 🔄
+┃ ▫️ .uptime ⏱️
+┃ ▫️ .restart ♻️
+┃ ▫️ .owner 👑
+┃ ▫️ .bot on/off 🔛
+┃ ▫️ .broadcast 📢
+┃ ▫️ .sticker ✂️
+┃ ▫️ .joke 😂
+┃ ▫️ .trt 🔤
+┃
+┣━━〔 *👥 GROUP COMMANDS* 〕━━
+┃ ▫️ .mute 🔇
+┃ ▫️ .unmute 🔊
+┃ ▫️ .delete 🗑️
+┃ ▫️ .kick 👢
+┃ ▫️ .tag 🏷️
+┃ ▫️ .tagall 📢
+┃ ▫️ .hidetag 🙈
+┃ ▫️ .kickall 🚫
+┃ ▫️ .getpic 📸
+┃ ▫️ .link 🔗
+┃ ▫️ .join ➕
+┃ ▫️ .add 👥
+┃ ▫️ .ginfo ℹ️
+┃ ▫️ .senddm 📨
+┃ ▫️ .listonline 👤
+┃ ▫️ .poll 📊
+┃ ▫️ .chatbot 💬
+┃ ▫️ .setgpp 🖼️
+┃ ▫️ .setgname 📝
+┃ ▫️ .setgdesc 📋
+┃ ▫️ .antitag ⚠️
+┃ ▫️ .warn ⚠️
+┃ ▫️ .clear 🧹
+┃ ▫️ .antilink 🔗
+┃ ▫️ .antimention 📢
+┃ ▫️ .ban 🚫
+┃
+┣━━〔 *💞 REACTIONS* 〕━━
+┃ ▫️ .bully
+┃ ▫️ .cuddle
+┃ ▫️ .cry
+┃ ▫️ .hug
+┃ ▫️ .kiss
+┃ ▫️ .pat
+┃ ▫️ .smug
+┃ ▫️ .slap
+┃ ▫️ .happy
+┃ ▫️ .dance
+┃
+┗━━━━━━━━━━━━━━━━┛
 
-┌───〔 📊 𝗦𝘆𝘀𝘁𝗲𝗺 𝗜𝗻𝗳𝗼 〕───┐
-│• Version: 2.0.0
-│• Prefix: ${PREFIX}
-│• Total RAM: ${totalMemMB} MB
-│• Free RAM: ${freeMemMB} MB
-│• Uptime: ${hours}h ${minutes}m ${seconds}s
-│• OS: ${os.type()}
-│• Platform: ${os.platform()}
-│• CPU Arch: ${os.arch()}
-└────────────────────────┘
+📢 Join our official channel!
+➤ https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r
 
-╭───《 ⚙️ 𝗕𝗼𝘁 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 》───╮
-│• alive ☺️
-│• ping ⚡
-│• video 🎥
-│• song 🎵
-│• menu 📜
-│• chid 🆔
-│• freebot 🆓
-│• setemoji 🐢
-│• settings ⚙️
-│• imagine 🎨
-│• pair 🔐
-│• play 🎧
-│• sora 🎬
-│• textmaker 🎭
-│• tts 🔊
-│• fb 📹
-│• openai 🧠
-│• ai 🤖
-│• deepseek 👾
-│• vv 👁️
-│• apk 📱
-│• ig 📸
-│• tiktok 🎶
-│• url 🔗
-│• repo 📦
-│• update 🔄
-│• uptime ⏱️
-│• restart ♻️
-│• owner 👑
-│• bot on/off 🔛
-│• broadcast 📢
-│• sticker ✂️
-│• joke 😂
-│• trt 🔤
-╰─────────────────────────╯
+👥 Join our main group!
+➤ https://chat.whatsapp.com/EC2rlVXPizF7fuicBDMgtq
 
-╭───《 👥 𝗚𝗿𝗼𝘂𝗽 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 》───╮
-│• mute 🔇
-│• unmute 🔊
-│• delete 🗑️
-│• kick 👢
-│• tag 🏷️
-│• tagall 📢
-│• hidetag 🙈
-│• kickall 🚫
-│• getpic 📸
-│• link 🔗
-│• join ➕
-│• add 👥
-│• ginfo ℹ️
-│• senddm 📨
-│• listonline 👤
-│• poll 📊
-│• chatbot 💬
-│• setgpp 🖼️
-│• setgname 📝
-│• setgdesc 📋
-│• antitag ⚠️
-│• warn ⚠️
-│• clear 🧹
-│• antilink 🔗
-│• antimention 📢
-│• ban 🚫
-╰─────────────────────────╯
-
-📢 Join our official channels & groups!
-🎅 Merry Christmas from SILA MD! 🎄`;
+🎅 Powered by NYONI MARKET`;
 
             await socket.sendMessage(sender, { image: { url: botImg }, caption: message }, { quoted: msg });
           } catch (error) {
@@ -847,7 +857,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'ping': {
-          await kavireact("🏓");
+          await nyonreact("🏓");
           const start = Date.now();
           const pingMsg = await socket.sendMessage(sender, { text: '🏓 Pinging...' }, { quoted: msg });
           const ping = Date.now() - start;
@@ -860,7 +870,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'mp3':
         case 'audio':
         case 'music': {
-          await kavireact("🎵");
+          await nyonreact("🎵");
           try {
             const q = args.join(" ");
             if (!q) {
@@ -877,7 +887,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
                 const meta = data.result.metadata;
                 const dlUrl = data.result.downloadUrl;
                 
-                const caption = `*🐢 𝙰𝚄𝙳𝙸𝙾 𝙸𝙽𝙵𝙾 🐢*\n*🐢 𝙽𝙰𝙼𝙴 :❯ ${meta.title}*\n*🐢 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 :❯ ${meta.channel}*\n*🐢 𝚃𝙸𝙼𝙴 :❯ ${meta.duration}*\n*𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`;
+                const caption = `*🐢 𝙰𝚄𝙳𝙸𝙾 𝙸𝙽𝙵𝙾 🐢*\n*🐢 𝙽𝙰𝙼𝙴 :❯ ${meta.title}*\n*🐢 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 :❯ ${meta.channel}*\n*🐢 𝚃𝙸𝙼𝙴 :❯ ${meta.duration}*\n*𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳*`;
                 
                 // Try to get thumbnail
                 try {
@@ -923,7 +933,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'fb': {
-          await kavireact("📹");
+          await nyonreact("📹");
           const fbUrl = args[0];
           if (!fbUrl) return await replygckavi("🚫 Please provide a valid Facebook URL.");
           
@@ -948,13 +958,13 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'chid': {
-          await kavireact("🆔");
+          await nyonreact("🆔");
           try {
             if (!isOwner) return await replygckavi('🚫 Only owner can use this command.');
-            if (!args[0]) return await replygckavi('ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴄʜᴀɴɴᴇʟ ᴜʀʟ.\nᴇx: https://whatsapp.com/channel/1234567890');
+            if (!args[0]) return await replygckavi('ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴄʜᴀɴɴᴇʟ ᴜʀʟ.\nᴇx: https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r');
 
             const match = args[0].match(/https:\/\/whatsapp\.com\/channel\/([a-zA-Z0-9_-]+)/i);
-            if (!match) return await replygckavi('ɪɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ᴜʀʟ.\nᴇx: https://whatsapp.com/channel/1234567890');
+            if (!match) return await replygckavi('ɪɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ᴜʀʟ.\nᴇx: https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r');
 
             const channelId = match[1];
             const channelMeta = await socket.newsletterMetadata("invite", channelId);
@@ -971,7 +981,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'flux':
         case 'fluxai':
         case 'aiimage': {
-          await kavireact("🎨");
+          await nyonreact("🎨");
           try {
             const prompt = args.join(" ");
             if (!prompt) {
@@ -1015,7 +1025,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
             await socket.sendMessage(sender, {
               image: imageBuffer,
-              caption: `*🎨 AI IMAGE GENERATED*\n\n*Prompt:* ${prompt}\n*Model:* ${apiUsed}\n*Powered by:* SILA MD MINI s1`
+              caption: `*🎨 AI IMAGE GENERATED*\n\n*Prompt:* ${prompt}\n*Model:* ${apiUsed}\n*Powered by:* NYON-XMD MINI s1`
             }, { quoted: msg });
           } catch (error) {
             await replygckavi(`*❌ ERROR*\n\nFailed to generate image:\n${error.message || "Unknown error"}\n\nPlease try again with a different prompt.`);
@@ -1024,18 +1034,18 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'pair': {
-          await kavireact("🔐");
+          await nyonreact("🔐");
           try {
             const phoneNumber = args.join(" ").trim();
             if (!phoneNumber) {
-              return await replygckavi("*𝚂𝙸𝙻𝙰 𝙼𝙳 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁 ☺️*\n*𝚆𝚁𝙸𝚃𝙴 𝙻𝙸𝙺𝙴 𝚃𝙷𝙸𝚂 😇*\n\n*.𝙿𝙰𝙸𝚁 ❮+255612491554❯*\n\n*𝙸𝙽𝚂𝚃𝙴𝙰𝙳 𝙾𝙵 𝚃𝙷𝙸𝚂 𝙽𝚄𝙼𝙱𝙴𝚁 𝚆𝚁𝙸𝚃𝙴 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁 𝙾𝙺 😊 𝚃𝙷𝙴𝙽 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝙶𝙴𝚃 𝙿𝙰𝙸𝚁𝙸𝙽𝙶 𝙲𝙾𝙳𝙴 😃 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙻𝙾𝙶𝙸𝙽 𝚆𝙸𝚃𝙷 𝚃𝙷𝙰𝚃 𝙿𝙰𝙸𝚁𝙸𝙽𝙶 𝙲𝙾𝙳𝙴 𝙸𝙽 𝚈𝙾𝚄𝚁 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 😌 𝚃𝙷𝙴𝙽 𝚂𝙸𝙻𝙰 𝙼𝙳 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚆𝙸𝙻𝙻 𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴 𝙾𝙽 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁 😍*");
+              return await replygckavi("*𝙽𝚈𝙾𝙽-𝚇𝙼𝙳 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁 ☺️*\n*𝚆𝚁𝙸𝚃𝙴 𝙻𝙸𝙺𝙴 𝚃𝙷𝙸𝚂 😇*\n\n*.𝙿𝙰𝙸𝚁 ❮+255760003443❯*\n\n*𝙸𝙽𝚂𝚃𝙴𝙰𝙳 𝙾𝙵 𝚃𝙷𝙸𝚂 𝙽𝚄𝙼𝙱𝙴𝚁 𝚆𝚁𝙸𝚃𝙴 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁 𝙾𝙺 😊 𝚃𝙷𝙴𝙽 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝙶𝙴𝚃 𝙿𝙰𝙸𝚁𝙸𝙽𝙶 𝙲𝙾𝙳𝙴 😃 𝚈𝙾𝚄 𝙲𝙰𝙽 𝙻𝙾𝙶𝙸𝙽 𝚆𝙸𝚃𝙷 𝚃𝙷𝙰𝚃 𝙿𝙰𝙸𝚁𝙸𝙽𝙶 𝙲𝙾𝙳𝙴 𝙸𝙽 𝚈𝙾𝚄𝚁 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 😌 𝚃𝙷𝙴𝙽 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳 𝙼𝙸𝙽𝙸 𝙱𝙾𝚃 𝚆𝙸𝙻𝙻 𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴 𝙾𝙽 𝚈𝙾𝚄𝚁 𝙽𝚄𝙼𝙱𝙴𝚁 😍*");
             }
 
             if (!phoneNumber.match(/^\+?\d{10,15}$/)) {
-              return await replygckavi("*DO YOU WANT SILA MD MINI BOT PAIR CODE 🤔*\n*THEN WRITE LIKE THIS ☺️\n\n*PAIR +255612491554*\n\n*WHEN YOU WRITE LIKE THIS 😇 THEN YOU WILL GET SILA MD MINI BOT PAIR CODE 😃 YOU CAN LOGIN IN YOUR WHATSAPP 😍 YOUR MINI BOT WILL ACTIVATE 🥰*");
+              return await replygckavi("*DO YOU WANT NYON-XMD MINI BOT PAIR CODE 🤔*\n*THEN WRITE LIKE THIS ☺️\n\n*PAIR +255760003443*\n\n*WHEN YOU WRITE LIKE THIS 😇 THEN YOU WILL GET NYON-XMD MINI BOT PAIR CODE 😃 YOU CAN LOGIN IN YOUR WHATSAPP 😍 YOUR MINI BOT WILL ACTIVATE 🥰*");
             }
 
-            const HEROKU_APP_URL = 'https://nachoka.onrender.com';
+            const HEROKU_APP_URL = 'https://nyon-xmd.onrender.com';
             const baseUrl = `${HEROKU_APP_URL}/code?number=`;
             const response = await axios.get(`${baseUrl}${encodeURIComponent(phoneNumber)}`);
 
@@ -1044,7 +1054,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
             }
 
             const pairingCode = response.data.code;
-            await socket.sendMessage(sender, { text: `*🐢 SILA MD MINI BOT 🐢*\n*PAIR CODE: ${pairingCode}*\n\nEnter this code in WhatsApp to connect your bot! 🚀` }, { quoted: msg });
+            await socket.sendMessage(sender, { text: `*🐢 NYON-XMD MINI BOT 🐢*\n*PAIR CODE: ${pairingCode}*\n\nEnter this code in WhatsApp to connect your bot! 🚀` }, { quoted: msg });
             
             await delay(1000);
             await socket.sendMessage(sender, { text: pairingCode }, { quoted: msg });
@@ -1059,7 +1069,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'videogen':
         case 'text2video':
         case 'genvideo': {
-          await kavireact("🎬");
+          await nyonreact("🎬");
           try {
             const text = args.join(" ").trim();
             if (!text) {
@@ -1079,10 +1089,10 @@ async function kavixmdminibotmessagehandler(socket, number) {
             const videoBuffer = Buffer.from(response.data, 'binary');
             await socket.sendMessage(sender, {
               video: videoBuffer,
-              caption: `*🎥 𝙰𝙸 𝚅𝙸𝙳𝙴𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 🎥*\n\n*📝 𝙿𝚛𝚘𝚖𝚙𝚝:* ${text}\n*🤖 𝙼𝚘𝚍𝚎𝚕:* SORA AI\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`
+              caption: `*🎥 𝙰𝙸 𝚅𝙸𝙳𝙴𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 🎥*\n\n*📝 𝙿𝚛𝚘𝚖𝚙𝚝:* ${text}\n*🤖 𝙼𝚘𝚍𝚎𝚕:* SORA AI\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳*`
             }, { quoted: msg });
           } catch (error) {
-            await replygckavi(`*❌ 𝚅𝙸𝙳𝙴𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙰𝙸𝙻𝙴𝙳*\n\n*𝙴𝚛𝚛𝚘𝚛: ${error.message}*\n*𝚃𝚛𝚢 𝚊𝚐𝚊𝚒𝚗 𝚠𝚒𝚝𝚑 𝚊 𝚍𝚒𝚏𝚏𝚎𝚛𝚎𝚗𝚝 𝚙𝚛𝚘𝚖𝚙𝚝.*\n\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`);
+            await replygckavi(`*❌ 𝚅𝙸𝙳𝙴𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙰𝙸𝙻𝙴𝙳*\n\n*𝙴𝚛𝚛𝚘𝚛: ${error.message}*\n*𝚃𝚛𝚢 𝚊𝚐𝚊𝚒𝚗 𝚠𝚒𝚝𝚑 𝚊 𝚍𝚒𝚏𝚏𝚎𝚛𝚎𝚗𝚝 𝚙𝚛𝚘𝚖𝚙𝚝.*\n\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳*`);
           }
         }
         break;
@@ -1092,13 +1102,13 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'textgen':
         case 'styletext':
         case 'fancytext': {
-          await kavireact("🎭");
+          await nyonreact("🎭");
           try {
             const [style, ...textParts] = args;
             const text = textParts.join(" ").trim();
 
             if (!style || !text) {
-              return await replygckavi(`*🎨 𝚃𝙴𝚇𝚃 𝙼𝙰𝙺𝙴𝚁 🎨*\n\n*𝙲𝚁𝙴𝙰𝚃𝙴 𝚂𝚃𝚈𝙻𝙸𝚂𝙷 𝚃𝙴𝚇𝚃 𝙸𝙼𝙰𝙶𝙴𝚂 ✨*\n\n*𝚄𝚂𝙰𝙶𝙴:*\n.textmaker <style> <text>\n\n*𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝚂𝚃𝚈𝙻𝙴𝚂:*\n• metallic - 3D Metal Text\n• ice - Ice Text Effect\n• snow - Snow 3D Text\n• impressive - Colorful Paint Text\n• matrix - Matrix Text Effect\n• light - Futuristic Light Text\n• neon - Colorful Neon Lights\n• devil - Neon Devil Wings\n• purple - Purple Text Effect\n• thunder - Thunder Text Effect\n• leaves - Green Brush Text\n• 1917 - 1917 Style Text\n• arena - Arena of Valor Cover\n• hacker - Anonymous Hacker\n• sand - Text on Sand\n• blackpink - Blackpink Style\n• glitch - Digital Glitch Text\n• fire - Flame Lettering\n\n*𝙴𝚇𝙰𝙼𝙿𝙻𝙴𝚂:*\n.textmaker metallic SILA\n.textmaker neon BOT\n.textmaker fire MD\n\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`);
+              return await replygckavi(`*🎨 𝚃𝙴𝚇𝚃 𝙼𝙰𝙺𝙴𝚁 🎨*\n\n*𝙲𝚁𝙴𝙰𝚃𝙴 𝚂𝚃𝚈𝙻𝙸𝚂𝙷 𝚃𝙴𝚇𝚃 𝙸𝙼𝙰𝙶𝙴𝚂 ✨*\n\n*𝚄𝚂𝙰𝙶𝙴:*\n.textmaker <style> <text>\n\n*𝙰𝚅𝙰𝙸𝙻𝙰𝙱𝙻𝙴 𝚂𝚃𝚈𝙻𝙴𝚂:*\n• metallic - 3D Metal Text\n• ice - Ice Text Effect\n• snow - Snow 3D Text\n• impressive - Colorful Paint Text\n• matrix - Matrix Text Effect\n• light - Futuristic Light Text\n• neon - Colorful Neon Lights\n• devil - Neon Devil Wings\n• purple - Purple Text Effect\n• thunder - Thunder Text Effect\n• leaves - Green Brush Text\n• 1917 - 1917 Style Text\n• arena - Arena of Valor Cover\n• hacker - Anonymous Hacker\n• sand - Text on Sand\n• blackpink - Blackpink Style\n• glitch - Digital Glitch Text\n• fire - Flame Lettering\n\n*𝙴𝚇𝙰𝙼𝙿𝙻𝙴𝚂:*\n.textmaker metallic NYON-XMD\n.textmaker neon BOT\n.textmaker fire MINI\n\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳*`);
             }
 
             const styles = {
@@ -1112,7 +1122,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
             if (!styles[style]) {
               const availableStyles = Object.keys(styles).join(', ');
-              return await replygckavi(`*❌ 𝙸𝙽𝚅𝙰𝙻𝙸𝙳 𝚂𝚃𝚈𝙻𝙴*\n\n*𝙰𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚜𝚝𝚢𝚕𝚎𝚜:* ${availableStyles}\n\n*𝚄𝚜𝚎: .textmaker <style> <text>*\n*𝙴𝚡𝚊𝚖𝚙𝚕𝚎: .textmaker metallic SILA*`);
+              return await replygckavi(`*❌ 𝙸𝙽𝚅𝙰𝙻𝙸𝙳 𝚂𝚃𝚈𝙻𝙴*\n\n*𝙰𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚜𝚝𝚢𝚕𝚎𝚜:* ${availableStyles}\n\n*𝚄𝚜𝚎: .textmaker <style> <text>*\n*𝙴𝚡𝚊𝚖𝚙𝚕𝚎: .textmaker metallic NYON-XMD*`);
             }
 
             await socket.sendMessage(sender, {
@@ -1128,10 +1138,10 @@ async function kavixmdminibotmessagehandler(socket, number) {
             const imageBuffer = Buffer.from(response.data, 'binary');
             await socket.sendMessage(sender, {
               image: imageBuffer,
-              caption: `*🎨 𝚃𝙴𝚇𝚃 𝙼𝙰𝙺𝙴𝚁 🎨*\n\n*📝 𝚃𝚎𝚡𝚝:* ${text}\n*🎭 𝚂𝚝𝚢𝚕𝚎:* ${styles[style]}\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`
+              caption: `*🎨 𝚃𝙴𝚇𝚃 𝙼𝙰𝙺𝙴𝚁 🎨*\n\n*📝 𝚃𝚎𝚡𝚝:* ${text}\n*🎭 𝚂𝚝𝚢𝚕𝚎:* ${styles[style]}\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳*`
             }, { quoted: msg });
           } catch (error) {
-            await replygckavi(`*❌ 𝚃𝙴𝚇𝚃 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙰𝙸𝙻𝙴𝙳*\n\n*𝙴𝚛𝚛𝚘𝚛: ${error.message}*\n*𝚃𝚛𝚢 𝚊𝚐𝚊𝚒𝚗 𝚠𝚒𝚝𝚑 𝚍𝚒𝚏𝚏𝚎𝚛𝚎𝚗𝚝 𝚝𝚎𝚡𝚝 𝚘𝚛 𝚜𝚝𝚢𝚕𝚎.*\n\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`);
+            await replygckavi(`*❌ 𝚃𝙴𝚇𝚃 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙰𝙸𝙻𝙴𝙳*\n\n*𝙴𝚛𝚛𝚘𝚛: ${error.message}*\n*𝚃𝚛𝚢 𝚊𝚐𝚊𝚒𝚗 𝚠𝚒𝚝𝚑 𝚍𝚒𝚏𝚏𝚎𝚛𝚎𝚗𝚝 𝚝𝚎𝚡𝚝 𝚘𝚛 𝚜𝚝𝚢𝚕𝚎.*\n\n*✨ 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳*`);
           }
         }
         break;
@@ -1139,7 +1149,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'tts':
         case 'say':
         case 'speak': {
-          await kavireact("🔊");
+          await nyonreact("🔊");
           try {
             const q = args.join(" ");
             if (!q) {
@@ -1173,7 +1183,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'ytmp4':
         case 'mp4':
         case 'ytv': {
-          await kavireact("🎥");
+          await nyonreact("🎥");
           try {
             const text = args.join(" ");
             if (!text) {
@@ -1202,7 +1212,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 *🐢 𝚅𝙸𝙴𝚆𝚂 :❯ ${data.views}*
 *🐢 𝚃𝙸𝙼𝙴 :❯ ${data.timestamp}*
 
-*🐢 𝙸𝙼𝙿𝙾𝚁𝚃𝙰𝙽𝚃 𝚃𝙾𝙿𝙸𝙲 🐢*
+*🐢 𝙸𝙼𝙿𝙾𝚁𝚃𝙰𝙽𝚃 𝙸𝙽𝙵𝙾 🐢*
 *𝙵𝙸𝚁𝚂𝚃 𝙼𝙴𝙽𝚃𝙸𝙾𝙽 𝙼𝚈 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝙸𝚃'𝚂 𝙲𝙾𝙼𝙿𝚄𝙻𝚂𝙾𝚁𝚈 😫 𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚂𝙸𝙼𝙿𝙻𝙴 𝚅𝙸𝙳𝙴𝙾 𝚃𝙷𝙴𝙽 𝚆𝚁𝙸𝚃𝙴 𝙽𝚄𝙼𝙱𝙴𝚁 ❮1❯ ☺️ 𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚅𝙸𝙳𝙴𝙾 𝙸𝙽 𝙵𝙸𝙻𝙴 𝚃𝙷𝙴𝙽 𝚆𝚁𝙸𝚃𝙴 𝙽𝚄𝙼𝙱𝙴𝚁 ❮2❯ 😇*
 
 *❮1❯ 𝚂𝙸𝙼𝙿𝙻𝙴 𝚅𝙸𝙳𝙴𝙾*
@@ -1257,7 +1267,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'avv':
         case 'viewonce':
         case 'open': {
-          await kavireact("👁️");
+          await nyonreact("👁️");
           try {
             const fromMe = msg.key.fromMe;
             const isCreator = fromMe;
@@ -1300,7 +1310,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
             }
 
             await socket.sendMessage(sender, sendContent, { quoted: msg });
-            await kavireact("😍");
+            await nyonreact("😍");
           } catch (error) {
             await replygckavi(`*𝙿𝙻𝙴𝙰𝚂𝙴 𝚆𝚁𝙸𝚃𝙴 ❮𝚅𝚅❯ 𝙰𝙶𝙰𝙸𝙽 🥺*\n\n_Error:_ ${error.message}`);
           }
@@ -1311,7 +1321,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'chatgpt':
         case 'gpt3':
         case 'open-gpt': {
-          await kavireact("🧠");
+          await nyonreact("🧠");
           try {
             if (!args.length) return await replygckavi("Please provide a message for OpenAI.\nExample: `.openai Hello`");
 
@@ -1320,14 +1330,14 @@ async function kavixmdminibotmessagehandler(socket, number) {
             const { data } = await axios.get(apiUrl);
 
             if (!data || !data.result) {
-              await kavireact("❌");
+              await nyonreact("❌");
               return await replygckavi("OpenAI failed to respond. Please try again later.");
             }
 
             await replygckavi(`🧠 *OpenAI Response:*\n\n${data.result}`);
-            await kavireact("✅");
+            await nyonreact("✅");
           } catch (e) {
-            await kavireact("❌");
+            await nyonreact("❌");
             await replygckavi("An error occurred while communicating with OpenAI.");
           }
         }
@@ -1339,7 +1349,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'gpt':
         case 'gpt4':
         case 'bing': {
-          await kavireact("🤖");
+          await nyonreact("🤖");
           try {
             if (!args.length) return await replygckavi("Please provide a message for the AI.\nExample: `.ai Hello`");
 
@@ -1348,14 +1358,14 @@ async function kavixmdminibotmessagehandler(socket, number) {
             const { data } = await axios.get(apiUrl);
 
             if (!data || !data.message) {
-              await kavireact("❌");
+              await nyonreact("❌");
               return await replygckavi("AI failed to respond. Please try again later.");
             }
 
             await replygckavi(`🤖 *AI Response:*\n\n${data.message}`);
-            await kavireact("✅");
+            await nyonreact("✅");
           } catch (e) {
-            await kavireact("❌");
+            await nyonreact("❌");
             await replygckavi("An error occurred while communicating with the AI.");
           }
         }
@@ -1364,7 +1374,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'deepseek':
         case 'deep':
         case 'seekai': {
-          await kavireact("👾");
+          await nyonreact("👾");
           try {
             if (!args.length) return await replygckavi("Please provide a message for DeepSeek AI.\nExample: `.deepseek Hello`");
 
@@ -1373,21 +1383,21 @@ async function kavixmdminibotmessagehandler(socket, number) {
             const { data } = await axios.get(apiUrl);
 
             if (!data || !data.answer) {
-              await kavireact("❌");
+              await nyonreact("❌");
               return await replygckavi("DeepSeek AI failed to respond. Please try again later.");
             }
 
             await replygckavi(`👾 *DeepSeek AI Response:*\n\n${data.answer}`);
-            await kavireact("✅");
+            await nyonreact("✅");
           } catch (e) {
-            await kavireact("❌");
+            await nyonreact("❌");
             await replygckavi("An error occurred while communicating with DeepSeek AI.");
           }
         }
         break;
 
         case 'apk': {
-          await kavireact("📱");
+          await nyonreact("📱");
           try {
             const text = args.join(" ");
             if (!text) return await replygckavi("Please provide an app name.\nExample: `.apk whatsapp`");
@@ -1446,7 +1456,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'ig':
         case 'instagram': {
-          await kavireact("📸");
+          await nyonreact("📸");
           try {
             const url = args[0];
             if (!url) return await replygckavi("Please provide an Instagram URL.\nExample: `.ig https://www.instagram.com/p/...`");
@@ -1462,12 +1472,12 @@ async function kavixmdminibotmessagehandler(socket, number) {
             if (result.type === "image" && result.url) {
               await socket.sendMessage(sender, {
                 image: { url: result.url },
-                caption: "📸 Instagram Image Download\nPowered by SILA MD"
+                caption: "📸 Instagram Image Download\nPowered by NYON-XMD"
               }, { quoted: msg });
             } else if (result.type === "video" && result.url) {
               await socket.sendMessage(sender, {
                 video: { url: result.url },
-                caption: "🎬 Instagram Video Download\nPowered by SILA MD"
+                caption: "🎬 Instagram Video Download\nPowered by NYON-XMD"
               }, { quoted: msg });
             } else if (result.media && Array.isArray(result.media)) {
               // Multiple media (carousel)
@@ -1493,7 +1503,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'tiktok': {
-          await kavireact("🎶");
+          await nyonreact("🎶");
           try {
             const url = args[0];
             if (!url) return await replygckavi("Please provide a TikTok URL.\nExample: `.tiktok https://vm.tiktok.com/...`");
@@ -1509,7 +1519,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
             if (result.video) {
               await socket.sendMessage(sender, {
                 video: { url: result.video },
-                caption: `🎶 TikTok Video\n\n${result.description || "Powered by SILA MD"}`
+                caption: `🎶 TikTok Video\n\n${result.description || "Powered by NYON-XMD"}`
               }, { quoted: msg });
             } else {
               await replygckavi("No video found in the TikTok URL.");
@@ -1520,10 +1530,171 @@ async function kavixmdminibotmessagehandler(socket, number) {
         }
         break;
 
+        // Reaction commands
+        case 'bully': {
+          await nyonreact("😈");
+          const gifs = [
+            'https://media.tenor.com/IQEjPpWZ6A0AAAAC/bully-anime.gif',
+            'https://media.tenor.com/9KjNkGl6K1sAAAAC/bully-bullied.gif',
+            'https://media.tenor.com/UhXj0qx4aUYAAAAC/anime-bully.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*😈 Bullying someone...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'cuddle': {
+          await nyonreact("🤗");
+          const gifs = [
+            'https://media.tenor.com/xIuXCTuTPHAAAAAC/cuddle-anime.gif',
+            'https://media.tenor.com/4Y8MxTQfB2EAAAAC/anime-cuddle.gif',
+            'https://media.tenor.com/IBGjTpY4JR0AAAAC/cuddle-snuggle.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*🤗 Cuddling...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'cry': {
+          await nyonreact("😢");
+          const gifs = [
+            'https://media.tenor.com/SkTw_4fW9zYAAAAC/anime-cry.gif',
+            'https://media.tenor.com/xx7R6mAKfF4AAAAC/anime-cry-sad.gif',
+            'https://media.tenor.com/ZKLZgvF6-QgAAAAC/cry-anime.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*😢 Crying...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'hug': {
+          await nyonreact("🫂");
+          const gifs = [
+            'https://media.tenor.com/Q6qGjq5bX2AAAAAC/hug-anime.gif',
+            'https://media.tenor.com/hv7rJ3FGoekAAAAC/hug.gif',
+            'https://media.tenor.com/CKpJmF9fTT0AAAAC/anime-hug.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*🫂 Hugging...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'kiss': {
+          await nyonreact("💋");
+          const gifs = [
+            'https://media.tenor.com/2tDThw_OmEIAAAAC/kiss-anime.gif',
+            'https://media.tenor.com/jnndDmOm5wIAAAAC/kiss.gif',
+            'https://media.tenor.com/lzVn_cP9O3AAAAAC/anime-kiss.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*💋 Kissing...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'pat': {
+          await nyonreact("💖");
+          const gifs = [
+            'https://media.tenor.com/MDDTPJxBmWEAAAAC/pat-anime.gif',
+            'https://media.tenor.com/lS_fk7I4R5gAAAAC/pat-head.gif',
+            'https://media.tenor.com/2gCdu2hKJm0AAAAC/anime-pat.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*💖 Patting...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'smug': {
+          await nyonreact("😏");
+          const gifs = [
+            'https://media.tenor.com/SoG_7s_k7D4AAAAC/smug-anime.gif',
+            'https://media.tenor.com/p9ZQAPCJj04AAAAC/smug-smug-anime.gif',
+            'https://media.tenor.com/QvhFrxXh-IsAAAAC/smug.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*😏 Smug face...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'slap': {
+          await nyonreact("👊");
+          const gifs = [
+            'https://media.tenor.com/VcV_9Zekq8wAAAAC/anime-slap.gif',
+            'https://media.tenor.com/5h-Pu7v0nCgAAAAC/slap-anime.gif',
+            'https://media.tenor.com/2GaG0vBvAJUAAAAC/slap.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*👊 Slapping...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'happy': {
+          await nyonreact("😄");
+          const gifs = [
+            'https://media.tenor.com/-DSYv6ElbOAAAAAC/happy-anime.gif',
+            'https://media.tenor.com/eTlByJqHddwAAAAC/happy.gif',
+            'https://media.tenor.com/H5iTKVfkV_QAAAAC/anime-happy.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*😄 Happy dance!*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
+        case 'dance': {
+          await nyonreact("💃");
+          const gifs = [
+            'https://media.tenor.com/kqZ5UxYdYkIAAAAC/dance-anime.gif',
+            'https://media.tenor.com/7Y0r-Tlm9dEAAAAC/dance.gif',
+            'https://media.tenor.com/YlROp4nBuPAAAAAC/anime-dance.gif'
+          ];
+          const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+          await socket.sendMessage(sender, {
+            video: { url: randomGif },
+            caption: "*💃 Dancing...*",
+            gifPlayback: true
+          }, { quoted: msg });
+        }
+        break;
+
         // Group commands
         case 'mute': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🔇");
+          await nyonreact("🔇");
           try {
             await socket.groupSettingUpdate(sender, 'announcement');
             await replygckavi("Group has been muted. Only admins can send messages.");
@@ -1535,7 +1706,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'unmute': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🔊");
+          await nyonreact("🔊");
           try {
             await socket.groupSettingUpdate(sender, 'not_announcement');
             await replygckavi("Group has been unmuted. Everyone can send messages.");
@@ -1548,7 +1719,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'delete':
         case 'del': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🗑️");
+          await nyonreact("🗑️");
           try {
             const quoted = msg.message?.extendedTextMessage?.contextInfo;
             if (quoted) {
@@ -1565,7 +1736,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'kick': {
           if (!isGroup) return await groupMessage();
-          await kavireact("👢");
+          await nyonreact("👢");
           try {
             const mentionedJid = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
             if (mentionedJid && mentionedJid[0]) {
@@ -1584,7 +1755,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'tagall':
         case 'hidetag': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🏷️");
+          await nyonreact("🏷️");
           try {
             const metadata = await socket.groupMetadata(sender);
             const participants = metadata.participants;
@@ -1608,7 +1779,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'kickall': {
           if (!isGroup) return await groupMessage();
           if (!isOwner) return await ownerMessage();
-          await kavireact("🚫");
+          await nyonreact("🚫");
           try {
             const metadata = await socket.groupMetadata(sender);
             const participants = metadata.participants.filter(p => !p.admin);
@@ -1628,7 +1799,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'getpic': {
           if (!isGroup) return await groupMessage();
-          await kavireact("📸");
+          await nyonreact("📸");
           try {
             const mentionedJid = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
             if (mentionedJid && mentionedJid[0]) {
@@ -1652,7 +1823,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'link': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🔗");
+          await nyonreact("🔗");
           try {
             const metadata = await socket.groupMetadata(sender);
             const inviteCode = await socket.groupInviteCode(sender);
@@ -1665,7 +1836,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'join': {
-          await kavireact("➕");
+          await nyonreact("➕");
           try {
             const inviteCode = args[0];
             if (!inviteCode) return await replygckavi("Please provide a group invite code.\nExample: .join ABC123def456");
@@ -1680,10 +1851,10 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'add': {
           if (!isGroup) return await groupMessage();
-          await kavireact("👥");
+          await nyonreact("👥");
           try {
             const numbers = args;
-            if (numbers.length === 0) return await replygckavi("Please provide phone numbers to add.\nExample: .add 255612491554 255789012345");
+            if (numbers.length === 0) return await replygckavi("Please provide phone numbers to add.\nExample: .add 255760003443 255763111390");
 
             const participants = numbers.map(num => num.replace(/[^0-9]/g, '') + '@s.whatsapp.net');
             await socket.groupParticipantsUpdate(sender, participants, 'add');
@@ -1696,7 +1867,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'ginfo': {
           if (!isGroup) return await groupMessage();
-          await kavireact("ℹ️");
+          await nyonreact("ℹ️");
           try {
             const metadata = await socket.groupMetadata(sender);
             const admins = metadata.participants.filter(p => p.admin).map(p => p.id.split('@')[0]);
@@ -1721,7 +1892,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'senddm': {
           if (!isGroup) return await groupMessage();
           if (!isOwner) return await ownerMessage();
-          await kavireact("📨");
+          await nyonreact("📨");
           try {
             const mentionedJid = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
             const message = args.slice(1).join(" ");
@@ -1740,7 +1911,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'listonline': {
           if (!isGroup) return await groupMessage();
-          await kavireact("👤");
+          await nyonreact("👤");
           try {
             const metadata = await socket.groupMetadata(sender);
             const onlineList = metadata.participants
@@ -1759,7 +1930,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'poll': {
           if (!isGroup) return await groupMessage();
-          await kavireact("📊");
+          await nyonreact("📊");
           try {
             const [question, ...options] = args.join(" ").split("|");
             if (!question || options.length < 2) {
@@ -1782,7 +1953,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'chatbot': {
-          await kavireact("💬");
+          await nyonreact("💬");
           try {
             const state = args[0]?.toLowerCase();
             if (state === 'on' || state === 'off') {
@@ -1799,7 +1970,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'setgpp': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🖼️");
+          await nyonreact("🖼️");
           try {
             const quoted = msg.message?.imageMessage;
             if (quoted) {
@@ -1820,7 +1991,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'setgname': {
           if (!isGroup) return await groupMessage();
-          await kavireact("📝");
+          await nyonreact("📝");
           try {
             const newName = args.join(" ");
             if (!newName) return await replygckavi("Please provide a new group name.\nExample: .setgname My Awesome Group");
@@ -1835,7 +2006,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'setgdesc': {
           if (!isGroup) return await groupMessage();
-          await kavireact("📋");
+          await nyonreact("📋");
           try {
             const newDesc = args.join(" ");
             if (!newDesc) return await replygckavi("Please provide a new group description.\nExample: .setgdesc This is our group for discussions");
@@ -1851,7 +2022,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'antitag':
         case 'antimention': {
           if (!isGroup) return await groupMessage();
-          await kavireact("⚠️");
+          await nyonreact("⚠️");
           try {
             const state = args[0]?.toLowerCase();
             if (state === 'on' || state === 'off') {
@@ -1871,7 +2042,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'warn': {
           if (!isGroup) return await groupMessage();
-          await kavireact("⚠️");
+          await nyonreact("⚠️");
           try {
             const mentionedJid = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
             if (mentionedJid && mentionedJid[0]) {
@@ -1891,7 +2062,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'clear': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🧹");
+          await nyonreact("🧹");
           try {
             // This would typically clear chat, but WhatsApp Web doesn't support clearing group chats
             await replygckavi("To clear chat, please use WhatsApp's built-in clear chat feature.\n\nFor individual chats, you can use WhatsApp's 'Clear chat' option.");
@@ -1903,7 +2074,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'antilink': {
           if (!isGroup) return await groupMessage();
-          await kavireact("🔗");
+          await nyonreact("🔗");
           try {
             const state = args[0]?.toLowerCase();
             if (state === 'on' || state === 'off') {
@@ -1924,7 +2095,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'ban': {
           if (!isGroup) return await groupMessage();
           if (!isOwner) return await ownerMessage();
-          await kavireact("🚫");
+          await nyonreact("🚫");
           try {
             const mentionedJid = msg.message?.extendedTextMessage?.contextInfo?.mentionedJid;
             if (mentionedJid && mentionedJid[0]) {
@@ -1942,32 +2113,32 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         // Additional commands
         case 'alive': {
-          await kavireact("☺️");
-          await replygckavi(`*🐢 SILA MD MINI BOT 🐢*\n\n*Status:* 🟢 Online\n*Version:* 2.0.0\n*Owner:* +255612491554\n\n*Powered by SILA TECH*`);
+          await nyonreact("☺️");
+          await replygckavi(`*🐢 NYON-XMD MINI BOT 🐢*\n\n*Status:* 🟢 Online\n*Version:* 2.0.0\n*Owners:* +255760003443, +255763111390, +255610209120\n\n*Powered by NYONI MARKET*`);
         }
         break;
 
         case 'url': {
-          await kavireact("🔗");
-          await replygckavi(`*🔗 Bot URL:*\nhttps://nachoka.onrender.com\n\n*📱 Pair your number:*\n.pair YOUR_NUMBER\n\n*Example:* .pair +255612491554`);
+          await nyonreact("🔗");
+          await replygckavi(`*🔗 Bot URL:*\nhttps://nyon-xmd.onrender.com\n\n*📱 Pair your number:*\n.pair YOUR_NUMBER\n\n*Example:* .pair +255760003443`);
         }
         break;
 
         case 'repo': {
-          await kavireact("📦");
-          await replygckavi(`*📦 SILA MD Repository*\n\n*GitHub:* Coming soon...\n*Bot URL:* https://nachoka.onrender.com\n\n*For updates, join our channels!*`);
+          await nyonreact("📦");
+          await replygckavi(`*📦 NYON-XMD Repository*\n\n*GitHub:* Coming soon...\n*Bot URL:* https://nyon-xmd.onrender.com\n\n*For updates, join our channel!*\nhttps://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r`);
         }
         break;
 
         case 'update': {
           if (!isOwner) return await ownerMessage();
-          await kavireact("🔄");
+          await nyonreact("🔄");
           await replygckavi("*🔄 Updating...*\n\nPlease wait while I check for updates...\n\n*Status:* Up to date ✅\n*Version:* 2.0.0");
         }
         break;
 
         case 'uptime': {
-          await kavireact("⏱️");
+          await nyonreact("⏱️");
           const startTime = socketCreationTime.get(number) || Date.now();
           const uptime = Math.floor((Date.now() - startTime) / 1000);
           const hours = Math.floor(uptime / 3600);
@@ -1980,7 +2151,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'restart': {
           if (!isOwner) return await ownerMessage();
-          await kavireact("♻️");
+          await nyonreact("♻️");
           await replygckavi("*♻️ Restarting bot...*\n\nPlease wait a few seconds...");
           
           // Close socket
@@ -1992,20 +2163,20 @@ async function kavixmdminibotmessagehandler(socket, number) {
           
           // Restart after delay
           setTimeout(() => {
-            cyberkaviminibot(number, { headersSent: true, status: () => ({ send: () => {} }) });
+            nyonxmdminibot(number, { headersSent: true, status: () => ({ send: () => {} }) });
           }, 3000);
         }
         break;
 
         case 'owner': {
-          await kavireact("👑");
-          await replygckavi(`*👑 Bot Owner*\n\n*Name:* SILA TECH\n*Number:* +255612491554\n*Channel:* @SILA_TECH\n\n*Contact for support or queries!*`);
+          await nyonreact("👑");
+          await replygckavi(`*👑 Bot Owners*\n\n*Owner 1:* +255760003443\n*Owner 2:* +255763111390\n*Owner 3:* +255610209120\n*Channel:* https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r\n\n*Contact for support or queries!*`);
         }
         break;
 
         case 'bot': {
           if (!isOwner) return await ownerMessage();
-          await kavireact("🔛");
+          await nyonreact("🔛");
           const state = args[0]?.toLowerCase();
           if (state === 'on' || state === 'off') {
             await updateSettings(number, { worktype: state === 'on' ? 'public' : 'private' });
@@ -2019,7 +2190,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'broadcast':
         case 'bc': {
           if (!isOwner) return await ownerMessage();
-          await kavireact("📢");
+          await nyonreact("📢");
           const message = args.join(" ");
           if (!message) return await replygckavi("Please provide a message to broadcast.\nExample: .broadcast Hello everyone!");
 
@@ -2029,7 +2200,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
           for (const session of sessions) {
             try {
               await socket.sendMessage(session.number + '@s.whatsapp.net', { 
-                text: `*📢 BROADCAST MESSAGE*\n\n${message}\n\n*From:* SILA MD Owner`
+                text: `*📢 BROADCAST MESSAGE*\n\n${message}\n\n*From:* NYON-XMD Owners`
               });
               sentCount++;
               await delay(1000); // Avoid rate limiting
@@ -2043,7 +2214,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'trt': {
-          await kavireact("🔤");
+          await nyonreact("🔤");
           const text = args.join(" ");
           if (!text) return await replygckavi("Please provide text to translate.\nExample: .trt Hello world");
 
@@ -2064,7 +2235,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 
         case 'sticker':
         case 's': {
-          await kavireact("✂️");
+          await nyonreact("✂️");
           const quoted = msg.message?.imageMessage || msg.message?.videoMessage;
           if (quoted) {
             try {
@@ -2087,7 +2258,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
         break;
 
         case 'joke': {
-          await kavireact("😂");
+          await nyonreact("😂");
           try {
             const jokes = [
               "Why don't scientists trust atoms? Because they make up everything!",
@@ -2103,7 +2274,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
             ];
             
             const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-            await replygckavi(`*😂 Joke of the Day*\n\n${randomJoke}\n\n*Powered by SILA MD*`);
+            await replygckavi(`*😂 Joke of the Day*\n\n${randomJoke}\n\n*Powered by NYON-XMD*`);
           } catch (error) {
             await replygckavi("I'm too tired to tell jokes right now! 😴");
           }
@@ -2114,8 +2285,8 @@ async function kavixmdminibotmessagehandler(socket, number) {
         case 'setting':
         case 'set': {
           if (!isOwner) return await replygckavi('🚫 Only owner can use this command.');
-          await kavireact("⚙️");
-          let kavitext = `*🛠️ 𝙼𝚒𝚗𝚒 𝙱𝚘𝚝 𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜 🛠️*
+          await nyonreact("⚙️");
+          let nyontext = `*🛠️ 𝙼𝚒𝚗𝚒 𝙱𝚘𝚝 𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜 🛠️*
 
 
 ┌━━━━━➢
@@ -2139,19 +2310,19 @@ async function kavixmdminibotmessagehandler(socket, number) {
 └━━━━━➢
 
 ┌━━━━━➢
-├*〖 4 〗 ＡＵＴＯ ＲＥＣＯＲ𝙳* 🎙️
+├*〖 4 〗 ＡＵＴＯ ＲＥＣＯ𝑅𝙳* 🎙️
 ├━━ 4.1 ➣ ᴇɴᴀʙʟᴇ ᴀᴜᴛᴏʀᴇᴄᴏʀᴅ ✅
 ├━━ 4.2 ➣ ᴅɪsᴀʙʟᴇ ᴀᴜᴛᴏʀᴇᴄᴏʀᴅ ❌
 └━━━━━➢
 
 ┌━━━━━➢
-├*〖 5 〗 ＡＵＴＯ ＴＹＰ𝙴* ⌨️
+├*〖 5 〗 ＡＵＴＯ ＴＹ𝑃𝙴* ⌨️
 ├━━ 5.1 ➣ ᴇɴᴀʙʟᴇ ᴀᴜᴛᴏᴛʏᴘᴇ ✅
 ├━━ 5.2 ➣ ᴅɪsᴀʙʟᴇ ᴀᴜᴛᴏᴛʏᴘᴇ ❌
 └━━━━━➢
 
 ┌━━━━━➢
-├*〖 6 〗 ＡＵＴＯ ＲＥＡ𝙳* 👁️🚫
+├*〖 6 〗 ＡＵＴＯ ＲＥ𝐴𝙳* 👁️🚫
 ├━━ 6.1 ➣ ᴇɴᴀʙʟᴇ ᴀᴜᴛᴏ ʀᴇᴀᴅ ✅
 ├━━ 6.2 ➣ ᴅɪsᴀʙʟᴇ ᴀᴜᴛᴏ ʀᴇᴀᴅ ❌
 └━━━━━➢
@@ -2162,7 +2333,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
 ├━━ 7.2 ➣ ᴅɪsᴀʙʟᴇ ᴀᴜᴛᴏ ʟɪᴋᴇ sᴛᴀᴛᴜs ❌
 └━━━━━➢`;
 
-          await socket.sendMessage(sender, { image: { url: botImg }, caption: kavitext }, { quoted: msg });
+          await socket.sendMessage(sender, { image: { url: botImg }, caption: nyontext }, { quoted: msg });
         }
         break;
 
@@ -2183,7 +2354,7 @@ async function kavixmdminibotmessagehandler(socket, number) {
   });
 }
 
-async function kavixmdminibotstatushandler(socket, number) {
+async function nyonxmdminibotstatushandler(socket, number) {
   socket.ev.on('messages.upsert', async ({ messages }) => {
     const msg = messages[0];
     if (!msg || !msg.message) return;
@@ -2281,7 +2452,7 @@ async function uploadCredsToMongoDB(credsPath, number) {
   }
 }
 
-async function cyberkaviminibot(number, res) {
+async function nyonxmdminibot(number, res) {
   const sanitizedNumber = number.replace(/[^0-9]/g, '');
   const sessionPath = path.join(SESSION_BASE_PATH, `session_${sanitizedNumber}`);
 
@@ -2319,8 +2490,8 @@ async function cyberkaviminibot(number, res) {
     await autoJoinChannels(socket);
     await setupChannelAutoReaction(socket);
     
-    await kavixmdminibotmessagehandler(socket, sanitizedNumber);
-    await kavixmdminibotstatushandler(socket, sanitizedNumber);
+    await nyonxmdminibotmessagehandler(socket, sanitizedNumber);
+    await nyonxmdminibotstatushandler(socket, sanitizedNumber);
 
     let responseStatus = {
       codeSent: false,
@@ -2395,7 +2566,7 @@ async function cyberkaviminibot(number, res) {
             }
 
             setTimeout(() => {
-              cyberkaviminibot(sanitizedNumber, res);
+              nyonxmdminibot(sanitizedNumber, res);
             }, 2000); 
           break;
 
@@ -2422,12 +2593,12 @@ async function cyberkaviminibot(number, res) {
           break;
 
           case DisconnectReason.multideviceMismatch:
-            console.log(`[ ${sanitizedNumber} ] Multi-device mismatch`);
+            console.log(`[ ${sanitizedNumber} ] Multi-device mismatch');
             responseStatus.error = 'Multi-device configuration mismatch. Please try pairing again.';
           break;
 
           case DisconnectReason.unavailable:
-            console.log(`[ ${sanitizedNumber} ] Service unavailable`);
+            console.log(`[ ${sanitizedNumber} ] Service unavailable');
             responseStatus.error = 'WhatsApp service is temporarily unavailable. Please try again later.';
           break;
 
@@ -2473,7 +2644,7 @@ async function cyberkaviminibot(number, res) {
           const sessionId = await uploadCredsToMongoDB(filePath, sanitizedNumber);
           const userId = await socket.decodeJid(socket.user.id);
           await Session.findOneAndUpdate({ number: userId }, { sessionId: sessionId }, { upsert: true, new: true });     
-          await socket.sendMessage(userId, { text: `*╭━━━〔 🐢 𝚂𝙸𝙻𝙰 𝙼𝙳 🐢 〕━━━┈⊷*\n*┃🐢│ 𝙱𝙾𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈!*\n*┃🐢│ 𝚃𝙸𝙼𝙴 :❯ ${new Date().toLocaleString()}*\n*┃🐢│ 𝚂𝚃𝙰𝚃𝚄𝚂 :❯ 𝙾𝙽𝙻𝙸𝙽𝙴 𝙰𝙽𝙳 𝚁𝙴𝙰𝙳𝚈!*\n*╰━━━━━━━━━━━━━━━┈⊷*\n\n*📢 Make sure to join our channels and groups!*` });
+          await socket.sendMessage(userId, { text: `*╭━━━〔 🐢 𝙽𝚈𝙾𝙽-𝚇𝙼𝙳 🐢 〕━━━┈⊷*\n*┃🐢│ 𝙱𝙾𝚃 𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙴𝙳 𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈!*\n*┃🐢│ 𝚃𝙸𝙼𝙴 :❯ ${new Date().toLocaleString()}*\n*┃🐢│ 𝚂𝚃𝙰𝚃𝚄𝚂 :❯ 𝙾𝙽𝙻𝙸𝙽𝙴 𝙰𝙽𝙳 𝚁𝙴𝙰𝙳𝚈!*\n*╰━━━━━━━━━━━━━━━┈⊷*\n\n*📢 Make sure to join our channel!*\nhttps://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r` });
 
         } catch (e) {
           console.log('Error saving session:', e.message);
@@ -2574,7 +2745,7 @@ async function startAllSessions() {
 
       try {
         await sessionDownload(sessionId, sanitizedNumber);
-        await cyberkaviminibot(sanitizedNumber, { headersSent: true, status: () => ({ send: () => {} }) });
+        await nyonxmdminibot(sanitizedNumber, { headersSent: true, status: () => ({ send: () => {} }) });
       } catch (err) {
         console.log(`Error reconnecting ${sanitizedNumber}:`, err.message);
       }
@@ -2612,7 +2783,7 @@ router.get('/', async (req, res) => {
     });
   }
 
-  await cyberkaviminibot(number, res);
+  await nyonxmdminibot(number, res);
 });
 
 process.on('exit', async () => {
