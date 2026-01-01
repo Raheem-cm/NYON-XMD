@@ -13,7 +13,7 @@ async(socket, m, { }) => {
     const ping = end - start;
 
     await socket.sendMessage(m.key.remoteJid, { 
-        text: `*⚡ sᴘᴇᴇᴅ :* ${ping}ᴍs\n> *🦾 sᴛᴀᴛᴜs :* ᴡᴀᴋᴀɴᴅᴀ ᴏɴʟɪɴᴇ`,
+        text: `*⚡ sᴘᴇᴇᴅ :* ${ping}ᴍs\n> *🦾 sᴛᴀᴛᴜs :* nyoni ᴏɴʟɪɴᴇ`,
         edit: msg.key 
     });
 });
