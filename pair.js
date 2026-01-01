@@ -53,17 +53,17 @@ const config = {
     AUTO_LIKE_EMOJI: ['💋', '😶', '✨️', '💗', '🎈', '🎉', '🥳', '❤️', '🧫', '🐭'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    IMAGE_PATH: 'https://pmd-img2url.koyeb.app/v/5c5d26adccf9cd517453ca6a8de11a7e.jpg',
-    GROUP_INVITE_LINK: '',
+    IMAGE_PATH: '',
+    GROUP_INVITE_LINK: 'https://files.catbox.moe/ph4c1n.jpg',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: 'https://pmd-img2url.koyeb.app/v/5c5d26adccf9cd517453ca6a8de11a7e.jpg',
-    NEWSLETTER_JID: '120363296818107681@newsletter',
+    RCD_IMAGE_PATH: 'https://files.catbox.moe/ph4c1n.jpg',
+    NEWSLETTER_JID: '120363399470975987@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
     version: '1.0.0',
-    OWNER_NUMBER: '923078071982',
-    BOT_FOOTER: '> ᴘᴏᴡᴇʀᴇᴅ ʙʏ BILAL KING',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vaj3Xnu17EmtDxTNnQ0G',
+    OWNER_NUMBER: '255610209120',
+    BOT_FOOTER: '> ᴘᴏᴡᴇʀᴇᴅ ʙʏ nyoni xmd',
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAffhD2ZjChG9DX922r',
 };
 
 // MongoDB Setup
@@ -136,7 +136,7 @@ function generateOTP() {
 }
 
 function getSriLankaTimestamp() {
-    return moment().tz('Africa/Nairobi').format('YYYY-MM-DD HH:mm:ss');
+    return moment().tz('Africa/dar es salaam').format('YYYY-MM-DD HH:mm:ss');
 }
 
 // Updated totalcmds to return actual plugin count
@@ -172,7 +172,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        'ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅʏʙʏ ᴛᴇᴄʜ'
+        'ᴘᴏᴡᴇʀᴇᴅ ʙʏ nyoni ᴛᴇᴄʜ'
     );
     await socket.sendMessage(userJid, { text: message });
 }
@@ -329,8 +329,8 @@ function setupCommandHandlers(socket, number) {
             key: { fromMe: false, participant: "0@s.whatsapp.net", remoteJid: "status@broadcast" },
             message: {
                 contactMessage: {
-                    displayName: "© BILAL KING ✅",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Meta\nORG:META AI;\nTEL;type=CELL;type=VOICE;waid=254101022551:+254101022551\nEND:VCARD`
+                    displayName: "© NYONI XMD ✅",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nFN:Meta\nORG:META AI;\nTEL;type=CELL;type=VOICE;waid=255610209120:+255610209120\nEND:VCARD`
                 }
             }
         };
@@ -341,7 +341,7 @@ function setupCommandHandlers(socket, number) {
                                   commands.find((cmd) => cmd.alias && cmd.alias.includes(cmdName));
 
             if (commandPlugin) {
-                try {
+                tr
                     if (commandPlugin.react) {
                         await socket.sendMessage(sender, { react: { text: commandPlugin.react, key: msg.key } });
                     }
