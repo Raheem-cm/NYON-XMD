@@ -1,7 +1,7 @@
 {
   "name": "dyby-md",
   "version": "1.0.0",
-  "description": "BILAL-MD WhatsApp Bot with Multi-Number Support",
+  "description": "NYON-XMD WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -40,7 +40,7 @@
     "bot",
     "multi-device",
     "baileys",
-    "BILAL-md"
+    "NYON-xmd"
   ],
   "author": "Your Name",
   "license": "MIT"
