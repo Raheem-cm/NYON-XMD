@@ -35,7 +35,7 @@ async(socket, m, { config, activeSockets, number, prefix }) => {
 │▢👑 *ᴏᴡɴᴇʀ* : ${config.OWNER_NUMBER}
 │▢🕰️ *ᴜᴘᴛɪᴍᴇ* : ${process.uptime().toFixed(2)}s
 │▢🧠 *ʀᴀᴍ* : ${(os.totalmem() / 1024 / 1024 / 1024).toFixed(2)} ɢʙ
-│▢ ᴅᴇᴠ : I'm Bilal king 👑 <
+│▢ ᴅᴇᴠ : nyoni-xmd here 👑 <
 ╰──────────────────⧉
 `;
 
@@ -77,8 +77,8 @@ async(socket, m, { config, activeSockets, number, prefix }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363296818107681@newsletter',
-                    newsletterName: "ᴅʏʙʏ x ɪɴᴄᴏɴɴᴜ",
+                    newsletterJid: '120363399470975987@newsletter',
+                    newsletterName: "Raheem xmd bot",
                     serverMessageId: 143
                 }
             }
