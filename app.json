@@ -1,8 +1,8 @@
 {
-  "name": "NYON XMD WhatsApp Bot",
-  "description": "Multi-device WhatsApp Bot by Raheem-cm",
-  "repository": "https://github.com/Raheem-cm/NYON-XMD",
-  "logo": "https://files.catbox.moe/ph4c1n.jpg",
+  "name": "SILA MD WhatsApp Bot",
+  "description": "Multi-device WhatsApp Bot by SILA",
+  "repository": "https://github.com/SILA/SILA-MD-s1",
+  "logo": "https://files.catbox.moe/90i7j4.png",
   "keywords": ["whatsapp", "bot", "multi-device", "baileys"],
   "buildpacks": [
     {
